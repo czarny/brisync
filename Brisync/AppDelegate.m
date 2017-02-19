@@ -33,9 +33,12 @@ static void displayConfigurationChanged(CGDirectDisplayID display, CGDisplayChan
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     CGDisplayRegisterReconfigurationCallback(displayConfigurationChanged, (__bridge void *)(self.mainController));
 
+    NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
+    NSString* version = [infoDict objectForKey:@"CFBundleShortVersionString"];
+
     self->_statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     self->_statusItem.button.image = [NSImage imageNamed:@"Icon"];
-    self->_statusItem.toolTip = @"Brisync";
+    self->_statusItem.toolTip = [NSString stringWithFormat:@"Brisync %@", version];
     self->_statusItem.menu = self.mainController.statusMenu;
 }
 
