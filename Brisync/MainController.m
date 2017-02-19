@@ -79,7 +79,7 @@
 }
 
 
-#pragma mark Private
+#pragma mark Public
 
 - (void)loadDisplays {
     // Clean up
@@ -118,6 +118,8 @@
     self->_lastBrightness = 0;  // Force brightness sync
 }
 
+
+#pragma mark Private
 
 - (DisplayUnitView *)createDispalyUnitView {
     NSArray *o;

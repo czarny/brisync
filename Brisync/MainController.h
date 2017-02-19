@@ -14,4 +14,6 @@
 
 @property (nonatomic, readwrite) IBOutlet NSMenu *statusMenu;
 
+- (void)loadDisplays;
+
 @end

@@ -11,6 +11,14 @@
 
 
 
+static void displayConfigurationChanged(CGDirectDisplayID display, CGDisplayChangeSummaryFlags flags, void *userInfo) {
+    // Reload display configuration
+    MainController *menu = (__bridge MainController *)userInfo;
+    [menu loadDisplays];
+}
+
+
+
 @interface AppDelegate () {
      NSStatusItem *_statusItem;
 }
@@ -23,6 +31,8 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    CGDisplayRegisterReconfigurationCallback(displayConfigurationChanged, (__bridge void *)(self.mainController));
+
     self->_statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     self->_statusItem.button.image = [NSImage imageNamed:@"Icon"];
     self->_statusItem.toolTip = @"Brisync";
@@ -31,7 +41,7 @@
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    CGDisplayRemoveReconfigurationCallback(displayConfigurationChanged, (__bridge void *)(self.mainController));
 }
 
 

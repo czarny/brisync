@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7CD78ECC2A3D98A5AF5768A7323A06018EBDE1D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7B7AF504EB5A68E55BFEE2DE7AC42A8B75AA9FB1" : 9223372036854775807,
+    "7CD78ECC2A3D98A5AF5768A7323A06018EBDE1D3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50CC8165-6E1D-4515-8968-8E4E0BF36BBE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7B7AF504EB5A68E55BFEE2DE7AC42A8B75AA9FB1" : "Brisync\/ddcctl\/",
+    "7CD78ECC2A3D98A5AF5768A7323A06018EBDE1D3" : "Brisync\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Brisync",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Brisync.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kfix\/ddcctl.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7B7AF504EB5A68E55BFEE2DE7AC42A8B75AA9FB1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:czarny\/Brisync.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7CD78ECC2A3D98A5AF5768A7323A06018EBDE1D3"
+    }
+  ]
+}
