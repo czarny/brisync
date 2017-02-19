@@ -53,7 +53,13 @@
     if(brightness != self->_lastBrightness) {
         for(NSNumber *display_id in self->_displayManager.externalDisplays) {
             CGDirectDisplayID display = [display_id intValue];
-            [self->_displayManager setBrightness:brightness forDisplay:display];
+            CGFloat factor = [self->_brightnessFactor[display_id] floatValue];
+
+            NSInteger b = MIN((int)(brightness * factor), 100);
+            [self->_displayManager setBrightness:b forDisplay:display];
+
+            DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[display_id] view];
+            [unit.slider setDoubleValue:b];
         }
     }
 
