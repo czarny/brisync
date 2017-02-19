@@ -14,6 +14,8 @@
 		496040F91E59AA8000EAFED8 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040F81E59AA8000EAFED8 /* MainController.m */; };
 		496041011E59ACA800EAFED8 /* DDC.c in Sources */ = {isa = PBXBuildFile; fileRef = 496040FB1E59ACA800EAFED8 /* DDC.c */; };
 		496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 496041071E59ACC500EAFED8 /* DisplayManager.m */; };
+		4960410B1E59ADBA00EAFED8 /* DisplayUnit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496041091E59ADBA00EAFED8 /* DisplayUnit.xib */; };
+		4960410E1E59ADCE00EAFED8 /* DisplayUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,9 @@
 		496040FC1E59ACA800EAFED8 /* DDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDC.h; sourceTree = "<group>"; };
 		496041061E59ACC500EAFED8 /* DisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
 		496041071E59ACC500EAFED8 /* DisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
+		4960410A1E59ADBA00EAFED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DisplayUnit.xib; sourceTree = "<group>"; };
+		4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayUnitView.h; sourceTree = "<group>"; };
+		4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayUnitView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +68,19 @@
 		496040E51E59AA0100EAFED8 /* Brisync */ = {
 			isa = PBXGroup;
 			children = (
+				496040EC1E59AA0100EAFED8 /* Assets.xcassets */,
 				496040E61E59AA0100EAFED8 /* AppDelegate.h */,
 				496040E71E59AA0100EAFED8 /* AppDelegate.m */,
-				496040EC1E59AA0100EAFED8 /* Assets.xcassets */,
+				496041061E59ACC500EAFED8 /* DisplayManager.h */,
+				496041071E59ACC500EAFED8 /* DisplayManager.m */,
 				496040EE1E59AA0100EAFED8 /* MainMenu.xib */,
 				496040F71E59AA8000EAFED8 /* MainController.h */,
 				496040F81E59AA8000EAFED8 /* MainController.m */,
 				496040F11E59AA0100EAFED8 /* Info.plist */,
+				496041091E59ADBA00EAFED8 /* DisplayUnit.xib */,
+				4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */,
+				4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */,
 				496040E91E59AA0100EAFED8 /* Supporting Files */,
-				496041061E59ACC500EAFED8 /* DisplayManager.h */,
-				496041071E59ACC500EAFED8 /* DisplayManager.m */,
 			);
 			path = Brisync;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4960410B1E59ADBA00EAFED8 /* DisplayUnit.xib in Resources */,
 				496040ED1E59AA0100EAFED8 /* Assets.xcassets in Resources */,
 				496040F01E59AA0100EAFED8 /* MainMenu.xib in Resources */,
 			);
@@ -170,6 +179,7 @@
 				496040F91E59AA8000EAFED8 /* MainController.m in Sources */,
 				496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */,
 				496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */,
+				4960410E1E59ADCE00EAFED8 /* DisplayUnitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +192,14 @@
 				496040EF1E59AA0100EAFED8 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		496041091E59ADBA00EAFED8 /* DisplayUnit.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4960410A1E59ADBA00EAFED8 /* Base */,
+			);
+			name = DisplayUnit.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
