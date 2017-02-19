@@ -8,3 +8,4 @@ You can adjust brightness by menu in system status bar.
 
 ### Supported dispalys
 * DELL U2415
+* DELL U2515H
