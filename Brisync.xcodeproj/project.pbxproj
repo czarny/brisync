@@ -12,6 +12,8 @@
 		496040ED1E59AA0100EAFED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496040EC1E59AA0100EAFED8 /* Assets.xcassets */; };
 		496040F01E59AA0100EAFED8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496040EE1E59AA0100EAFED8 /* MainMenu.xib */; };
 		496040F91E59AA8000EAFED8 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040F81E59AA8000EAFED8 /* MainController.m */; };
+		496041011E59ACA800EAFED8 /* DDC.c in Sources */ = {isa = PBXBuildFile; fileRef = 496040FB1E59ACA800EAFED8 /* DDC.c */; };
+		496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 496041071E59ACC500EAFED8 /* DisplayManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		496040F11E59AA0100EAFED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496040F71E59AA8000EAFED8 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		496040F81E59AA8000EAFED8 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		496040FB1E59ACA800EAFED8 /* DDC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DDC.c; sourceTree = "<group>"; };
+		496040FC1E59ACA800EAFED8 /* DDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDC.h; sourceTree = "<group>"; };
+		496041061E59ACC500EAFED8 /* DisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
+		496041071E59ACC500EAFED8 /* DisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 		496040DA1E59AA0100EAFED8 = {
 			isa = PBXGroup;
 			children = (
+				496040FA1E59ACA800EAFED8 /* ddcctl */,
 				496040E51E59AA0100EAFED8 /* Brisync */,
 				496040E41E59AA0100EAFED8 /* Products */,
 			);
@@ -64,6 +71,8 @@
 				496040F81E59AA8000EAFED8 /* MainController.m */,
 				496040F11E59AA0100EAFED8 /* Info.plist */,
 				496040E91E59AA0100EAFED8 /* Supporting Files */,
+				496041061E59ACC500EAFED8 /* DisplayManager.h */,
+				496041071E59ACC500EAFED8 /* DisplayManager.m */,
 			);
 			path = Brisync;
 			sourceTree = "<group>";
@@ -74,6 +83,15 @@
 				496040EA1E59AA0100EAFED8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		496040FA1E59ACA800EAFED8 /* ddcctl */ = {
+			isa = PBXGroup;
+			children = (
+				496040FB1E59ACA800EAFED8 /* DDC.c */,
+				496040FC1E59ACA800EAFED8 /* DDC.h */,
+			);
+			path = ddcctl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				496040EB1E59AA0100EAFED8 /* main.m in Sources */,
+				496041011E59ACA800EAFED8 /* DDC.c in Sources */,
 				496040F91E59AA8000EAFED8 /* MainController.m in Sources */,
 				496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */,
+				496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
