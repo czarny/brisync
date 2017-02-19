@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040E71E59AA0100EAFED8 /* AppDelegate.m */; };
+		496040EB1E59AA0100EAFED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040EA1E59AA0100EAFED8 /* main.m */; };
+		496040ED1E59AA0100EAFED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496040EC1E59AA0100EAFED8 /* Assets.xcassets */; };
+		496040F01E59AA0100EAFED8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496040EE1E59AA0100EAFED8 /* MainMenu.xib */; };
+		496040F91E59AA8000EAFED8 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040F81E59AA8000EAFED8 /* MainController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		496040E31E59AA0100EAFED8 /* Brisync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		496040E61E59AA0100EAFED8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		496040E71E59AA0100EAFED8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		496040EA1E59AA0100EAFED8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		496040EC1E59AA0100EAFED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		496040EF1E59AA0100EAFED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		496040F11E59AA0100EAFED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496040F71E59AA8000EAFED8 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		496040F81E59AA8000EAFED8 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		496040E01E59AA0100EAFED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		496040DA1E59AA0100EAFED8 = {
+			isa = PBXGroup;
+			children = (
+				496040E51E59AA0100EAFED8 /* Brisync */,
+				496040E41E59AA0100EAFED8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		496040E41E59AA0100EAFED8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				496040E31E59AA0100EAFED8 /* Brisync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		496040E51E59AA0100EAFED8 /* Brisync */ = {
+			isa = PBXGroup;
+			children = (
+				496040E61E59AA0100EAFED8 /* AppDelegate.h */,
+				496040E71E59AA0100EAFED8 /* AppDelegate.m */,
+				496040EC1E59AA0100EAFED8 /* Assets.xcassets */,
+				496040EE1E59AA0100EAFED8 /* MainMenu.xib */,
+				496040F71E59AA8000EAFED8 /* MainController.h */,
+				496040F81E59AA8000EAFED8 /* MainController.m */,
+				496040F11E59AA0100EAFED8 /* Info.plist */,
+				496040E91E59AA0100EAFED8 /* Supporting Files */,
+			);
+			path = Brisync;
+			sourceTree = "<group>";
+		};
+		496040E91E59AA0100EAFED8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				496040EA1E59AA0100EAFED8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		496040E21E59AA0100EAFED8 /* Brisync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496040F41E59AA0100EAFED8 /* Build configuration list for PBXNativeTarget "Brisync" */;
+			buildPhases = (
+				496040DF1E59AA0100EAFED8 /* Sources */,
+				496040E01E59AA0100EAFED8 /* Frameworks */,
+				496040E11E59AA0100EAFED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brisync;
+			productName = Brisync;
+			productReference = 496040E31E59AA0100EAFED8 /* Brisync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		496040DB1E59AA0100EAFED8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = czarny;
+				TargetAttributes = {
+					496040E21E59AA0100EAFED8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QP4ULH34WL;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 496040DE1E59AA0100EAFED8 /* Build configuration list for PBXProject "Brisync" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 496040DA1E59AA0100EAFED8;
+			productRefGroup = 496040E41E59AA0100EAFED8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				496040E21E59AA0100EAFED8 /* Brisync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		496040E11E59AA0100EAFED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496040ED1E59AA0100EAFED8 /* Assets.xcassets in Resources */,
+				496040F01E59AA0100EAFED8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		496040DF1E59AA0100EAFED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496040EB1E59AA0100EAFED8 /* main.m in Sources */,
+				496040F91E59AA8000EAFED8 /* MainController.m in Sources */,
+				496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		496040EE1E59AA0100EAFED8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				496040EF1E59AA0100EAFED8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		496040F21E59AA0100EAFED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		496040F31E59AA0100EAFED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		496040F51E59AA0100EAFED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QP4ULH34WL;
+				INFOPLIST_FILE = Brisync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pro.czarny.Brisync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		496040F61E59AA0100EAFED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QP4ULH34WL;
+				INFOPLIST_FILE = Brisync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pro.czarny.Brisync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		496040DE1E59AA0100EAFED8 /* Build configuration list for PBXProject "Brisync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496040F21E59AA0100EAFED8 /* Debug */,
+				496040F31E59AA0100EAFED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		496040F41E59AA0100EAFED8 /* Build configuration list for PBXNativeTarget "Brisync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496040F51E59AA0100EAFED8 /* Debug */,
+				496040F61E59AA0100EAFED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 496040DB1E59AA0100EAFED8 /* Project object */;
+}
