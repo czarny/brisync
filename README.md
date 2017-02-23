@@ -6,6 +6,11 @@ Application reads current brightness of your built-in display and passes it to e
 
 You can adjust brightness by menu in system status bar.
 
-### Supported dispalys
+# How to install
+Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.0.0/Brisync.zip). Extract it and copy to your /Applications directory.
+
+##### Tested monitors
 * DELL U2415
 * DELL U2515H
+* LG IPS235
+* IIYAMA PL2779Q
