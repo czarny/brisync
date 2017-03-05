@@ -12,5 +12,6 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 ##### Tested monitors
 * DELL U2415
 * DELL U2515H
+* DELL U2717D
 * LG IPS235
 * IIYAMA PL2779Q
