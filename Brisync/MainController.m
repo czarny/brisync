@@ -100,7 +100,7 @@
     for(NSNumber *display_id in self->_displayManager.externalDisplays) {
         CGDirectDisplayID display = [display_id intValue];
 
-        DisplayUnitView *unit = [self createDispalyUnitView];
+        DisplayUnitView *unit = [self createDisplayUnitView];
         unit.name.stringValue = [self->_displayManager getDisplayName:display];
         unit.slider.tag = display;
 
@@ -127,7 +127,7 @@
 
 #pragma mark Private
 
-- (DisplayUnitView *)createDispalyUnitView {
+- (DisplayUnitView *)createDisplayUnitView {
     NSArray *o;
     [[NSBundle mainBundle] loadNibNamed:@"DisplayUnit" owner:nil topLevelObjects:&o];
     DisplayUnitView *result = [o.firstObject isKindOfClass:[DisplayUnitView class]]? o.firstObject : o.lastObject;
