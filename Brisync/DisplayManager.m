@@ -43,7 +43,7 @@ NSString *DisplayGetDescription(CGDirectDisplayID display, UInt8 type) {
 - (instancetype)init {
     self = [super init];
     if(self) {
-        NSMutableArray *external_dispalys = [NSMutableArray new];
+        NSMutableArray *external_displays = [NSMutableArray new];
 
         // Get displays
         CGDirectDisplayID displays[kMaxDisplays];
@@ -58,11 +58,11 @@ NSString *DisplayGetDescription(CGDirectDisplayID display, UInt8 type) {
                 self->_builtinDisplay = display;
             }
             else {
-                [external_dispalys addObject:@(display)];
+                [external_displays addObject:@(display)];
             }
         }
 
-        self->_externalDisplays = [external_dispalys copy];
+        self->_externalDisplays = [external_displays copy];
     }
     return self;
 }
