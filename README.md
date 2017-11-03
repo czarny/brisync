@@ -16,3 +16,5 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * LG IPS235
 * IIYAMA PL2779Q
 * ASUS AS239
+* Fujitsu P27T-7
+* Eizo FlexScan EV2436W
