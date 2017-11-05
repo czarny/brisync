@@ -21,7 +21,7 @@ NSString *EDIDString(char *string) {
 
 
 NSString *DisplayGetDescription(CGDirectDisplayID display, UInt8 type) {
-    NSString *result = nil;
+    NSString *result = @"Unknown display";
     struct EDID edid = {};
 
     if (EDIDTest(display, &edid)) {
