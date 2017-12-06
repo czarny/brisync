@@ -35,6 +35,7 @@
 		4960410A1E59ADBA00EAFED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DisplayUnit.xib; sourceTree = "<group>"; };
 		4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayUnitView.h; sourceTree = "<group>"; };
 		4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayUnitView.m; sourceTree = "<group>"; };
+		49F87E541FD8A967004BDDC5 /* Brisync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brisync.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 		496040E51E59AA0100EAFED8 /* Brisync */ = {
 			isa = PBXGroup;
 			children = (
+				49F87E541FD8A967004BDDC5 /* Brisync.entitlements */,
 				496040EC1E59AA0100EAFED8 /* Assets.xcassets */,
 				496040E61E59AA0100EAFED8 /* AppDelegate.h */,
 				496040E71E59AA0100EAFED8 /* AppDelegate.m */,
@@ -135,6 +137,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QP4ULH34WL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -308,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Brisync/Brisync.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -324,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Brisync/Brisync.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
