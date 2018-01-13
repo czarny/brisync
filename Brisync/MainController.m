@@ -20,6 +20,8 @@
     NSInteger _lastBrightness;
 }
 
+@property(readonly) NSInteger maxBrightnessValue;
+
 @end
 
 
@@ -28,6 +30,13 @@
 -(void)setStatusMenu:(NSMenu *)statusMenu {
     self->_statusMenu = statusMenu;
     [self loadDisplays];
+}
+
+
+- (NSInteger)maxBrightnessValue {
+    NSInteger options[2] = { 100, 255 };
+    NSInteger index = [[NSUserDefaults standardUserDefaults] integerForKey:@"MaxBrightnessValue"];
+    return options[index];
 }
 
 - (instancetype)init {
@@ -47,19 +56,33 @@
     exit(0);
 }
 
+- (IBAction)onPreferences:(id)sender {
+    [NSApp activateIgnoringOtherApps: YES];
+    [self.preferencesPanel center];
+    [self.preferencesPanel makeKeyAndOrderFront:sender];
+}
+
+
+- (IBAction)onAbout:(id)sender {
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+    [[NSApplication sharedApplication] orderFrontStandardAboutPanel:sender];
+}
+
 
 - (void)onBrightnessCheck:(NSTimer *)sender {
-    float brightness = [self->_displayManager getDisplayBrightness:self->_displayManager.builtinDisplay];
+    NSInteger brightness = [self->_displayManager getDisplayBrightness:self->_displayManager.builtinDisplay];
+
     if(brightness != self->_lastBrightness) {
         for(NSNumber *display_id in self->_displayManager.externalDisplays) {
             CGDirectDisplayID display = [display_id intValue];
             CGFloat factor = [self->_brightnessFactor[display_id] floatValue];
 
-            NSInteger b = MIN((int)(brightness * factor), 100);
-            [self->_displayManager setBrightness:b forDisplay:display];
+            NSInteger procent = MIN((int)(brightness * factor), 100);
+            NSInteger new_brightness = (procent * self.maxBrightnessValue) / 100;
+            [self->_displayManager setBrightness:new_brightness forDisplay:display];
 
             DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[display_id] view];
-            [unit.slider setDoubleValue:b];
+            [unit.slider setDoubleValue:procent];
         }
     }
 
@@ -69,7 +92,8 @@
 
 - (void)onSliderValueChanged:(NSSlider *)slider {
     CGDirectDisplayID display = (CGDirectDisplayID)slider.tag;
-    [self->_displayManager setBrightness:slider.intValue forDisplay:display];
+    NSInteger new_brightness = (slider.intValue * self.maxBrightnessValue) / 100;   // Scaled value for display
+    [self->_displayManager setBrightness:new_brightness forDisplay:display];
 
     // Calc factor
     CGFloat factor = (CGFloat)slider.intValue / (CGFloat)self->_lastBrightness;

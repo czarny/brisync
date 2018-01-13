@@ -13,6 +13,7 @@
 @interface MainController : NSObject
 
 @property (nonatomic, readwrite) IBOutlet NSMenu *statusMenu;
+@property (nonatomic, readwrite) IBOutlet NSWindow *preferencesPanel;
 
 - (void)loadDisplays;
 
