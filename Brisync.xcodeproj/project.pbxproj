@@ -69,19 +69,14 @@
 		496040E51E59AA0100EAFED8 /* Brisync */ = {
 			isa = PBXGroup;
 			children = (
-				49F87E541FD8A967004BDDC5 /* Brisync.entitlements */,
+				49E0FD84200A4A6100FF5C69 /* Views */,
+				49E0FD7F200A438700FF5C69 /* Tools */,
 				496040EC1E59AA0100EAFED8 /* Assets.xcassets */,
 				496040E61E59AA0100EAFED8 /* AppDelegate.h */,
 				496040E71E59AA0100EAFED8 /* AppDelegate.m */,
-				496041061E59ACC500EAFED8 /* DisplayManager.h */,
-				496041071E59ACC500EAFED8 /* DisplayManager.m */,
 				496040EE1E59AA0100EAFED8 /* MainMenu.xib */,
 				496040F71E59AA8000EAFED8 /* MainController.h */,
 				496040F81E59AA8000EAFED8 /* MainController.m */,
-				496040F11E59AA0100EAFED8 /* Info.plist */,
-				496041091E59ADBA00EAFED8 /* DisplayUnit.xib */,
-				4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */,
-				4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */,
 				496040E91E59AA0100EAFED8 /* Supporting Files */,
 			);
 			path = Brisync;
@@ -90,6 +85,8 @@
 		496040E91E59AA0100EAFED8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49F87E541FD8A967004BDDC5 /* Brisync.entitlements */,
+				496040F11E59AA0100EAFED8 /* Info.plist */,
 				496040EA1E59AA0100EAFED8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -102,6 +99,25 @@
 				496040FC1E59ACA800EAFED8 /* DDC.h */,
 			);
 			path = ddcctl;
+			sourceTree = "<group>";
+		};
+		49E0FD7F200A438700FF5C69 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				496041061E59ACC500EAFED8 /* DisplayManager.h */,
+				496041071E59ACC500EAFED8 /* DisplayManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		49E0FD84200A4A6100FF5C69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				496041091E59ADBA00EAFED8 /* DisplayUnit.xib */,
+				4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */,
+				4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

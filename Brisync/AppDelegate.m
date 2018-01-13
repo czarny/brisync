@@ -31,8 +31,15 @@ static void displayConfigurationChanged(CGDirectDisplayID display, CGDisplayChan
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // Register defaults
+    NSMutableDictionary *defaults = [NSMutableDictionary new];
+    defaults[@"MaxBrightnessValue"] = @0;
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+
+    // Hook to dispaly configuration events
     CGDisplayRegisterReconfigurationCallback(displayConfigurationChanged, (__bridge void *)(self.mainController));
 
+    // Prepare status bar item
     NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
     NSString* version = [infoDict objectForKey:@"CFBundleShortVersionString"];
 
