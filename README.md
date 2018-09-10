@@ -10,6 +10,7 @@ You can adjust brightness by a menu in the system status bar. Adjusting brightne
 Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.0.0/Brisync.zip). Extract it and copy to your /Applications directory.
 
 ##### Tested displays
+* DELL U2412M
 * DELL U2415
 * DELL U2515H
 * DELL U2717D
