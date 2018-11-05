@@ -11,6 +11,10 @@ You can adjust brightness by a menu in the system status bar or hotkeys:
 Adjusting brightness in the menu changes internal brightness factor for this display so future brightness updates match your preferences.
 
 # How to install
+```{bash}
+brew cask install brisync
+```
+##### or
 Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.2.0/Brisync.zip). Extract it and copy to your /Applications directory.
 
 ##### Tested displays
