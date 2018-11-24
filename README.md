@@ -24,6 +24,7 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * DELL U2717D
 * DELL U3818DW
 * LG IPS235
+* LG UltraFine 5K
 * IIYAMA PL2779Q
 * ASUS AS239
 * Fujitsu P27T-7
