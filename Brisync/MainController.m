@@ -24,6 +24,7 @@
 
 @property(readonly) DisplayManager *displayManager;
 @property(readonly) NSInteger maxBrightnessValue;
+@property(readonly) NSArray *brightnessMap;
 
 @end
 
@@ -40,6 +41,18 @@
     NSInteger options[2] = { 100, 255 };
     NSInteger index = [[NSUserDefaults standardUserDefaults] integerForKey:@"MaxBrightnessValue"];
     return options[index];
+}
+
+
+- (NSArray *)brightnessMap {
+    NSMutableArray *result = [NSMutableArray new];
+    for(int i = 0; i< 11; i++) {
+        NSString *key = [NSString stringWithFormat:@"BrightnessMapSlider%d", i];
+        NSNumber *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+        [result addObject:value];
+    }
+
+    return result;
 }
 
 - (instancetype)init {
@@ -122,13 +135,21 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 
 - (void)onBrightnessCheck:(NSTimer *)sender {
     NSInteger brightness = [self->_displayManager getDisplayBrightness:self->_displayManager.builtinDisplay];
+    NSArray *brightness_map = self.brightnessMap;
 
     if(brightness != self->_lastBrightness) {
         for(NSNumber *display_id in self->_displayManager.externalDisplays) {
+            NSUInteger scope = brightness / 10;
+            NSInteger x = brightness % 10;
+            NSUInteger x0 = [brightness_map[scope] integerValue];
+            NSUInteger x1 = [brightness_map[scope+1] integerValue];
+            CGFloat a = (x1 - x0) / 10;
+            NSUInteger map_value = a * x + x0;
+
             CGDirectDisplayID display = [display_id intValue];
             CGFloat factor = [self->_brightnessFactor[display_id] floatValue];
 
-            NSInteger procent = MIN((int)(brightness * factor), 100);
+            NSInteger procent = MIN((int)(map_value * factor), 100);
             NSInteger new_brightness = (procent * self.maxBrightnessValue) / 100;
             [self->_displayManager setBrightness:new_brightness forDisplay:display];
 

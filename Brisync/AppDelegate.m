@@ -34,6 +34,17 @@ static void displayConfigurationChanged(CGDirectDisplayID display, CGDisplayChan
     // Register defaults
     NSMutableDictionary *defaults = [NSMutableDictionary new];
     defaults[@"MaxBrightnessValue"] = @0;
+    defaults[@"BrightnessMapSlider0"] = @0;
+    defaults[@"BrightnessMapSlider1"] = @10;
+    defaults[@"BrightnessMapSlider2"] = @20;
+    defaults[@"BrightnessMapSlider3"] = @30;
+    defaults[@"BrightnessMapSlider4"] = @40;
+    defaults[@"BrightnessMapSlider5"] = @50;
+    defaults[@"BrightnessMapSlider6"] = @60;
+    defaults[@"BrightnessMapSlider7"] = @70;
+    defaults[@"BrightnessMapSlider8"] = @80;
+    defaults[@"BrightnessMapSlider9"] = @90;
+    defaults[@"BrightnessMapSlider10"] = @100;
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
 
     // Hook to dispaly configuration events

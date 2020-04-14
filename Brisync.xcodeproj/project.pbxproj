@@ -16,6 +16,7 @@
 		496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 496041071E59ACC500EAFED8 /* DisplayManager.m */; };
 		4960410B1E59ADBA00EAFED8 /* DisplayUnit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496041091E59ADBA00EAFED8 /* DisplayUnit.xib */; };
 		4960410E1E59ADCE00EAFED8 /* DisplayUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */; };
+		4991A35924460D370089B14B /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991A35824460D370089B14B /* PreferencesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		4960410A1E59ADBA00EAFED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DisplayUnit.xib; sourceTree = "<group>"; };
 		4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayUnitView.h; sourceTree = "<group>"; };
 		4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayUnitView.m; sourceTree = "<group>"; };
+		4991A35724460D370089B14B /* PreferencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		4991A35824460D370089B14B /* PreferencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		49F87E541FD8A967004BDDC5 /* Brisync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brisync.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +80,8 @@
 				496040EE1E59AA0100EAFED8 /* MainMenu.xib */,
 				496040F71E59AA8000EAFED8 /* MainController.h */,
 				496040F81E59AA8000EAFED8 /* MainController.m */,
+				4991A35724460D370089B14B /* PreferencesController.h */,
+				4991A35824460D370089B14B /* PreferencesController.m */,
 				496040E91E59AA0100EAFED8 /* Supporting Files */,
 			);
 			path = Brisync;
@@ -202,6 +207,7 @@
 				496040F91E59AA8000EAFED8 /* MainController.m in Sources */,
 				496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */,
 				496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */,
+				4991A35924460D370089B14B /* PreferencesController.m in Sources */,
 				4960410E1E59ADCE00EAFED8 /* DisplayUnitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
