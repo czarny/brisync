@@ -26,3 +26,5 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * IIYAMA PL2779Q
 * LG IPS235
 * LG 38WK95W-C
+* LG 27UK850
+* U2713HM
