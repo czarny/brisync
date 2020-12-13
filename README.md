@@ -32,4 +32,5 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * LG 38WK95W-C
 * LG 27UK850
 * LG UltraFine 4K
+* LG UltraFine 5K
 * U2713HM
