@@ -17,5 +17,6 @@
 
 
 @property (nonatomic, strong) Display *display;
+@property (nonatomic, strong) Display *builtInDisplay;
 
 @end

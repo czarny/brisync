@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Display.h"
+#import "DisplayUnitView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite) IBOutlet NSProgressIndicator *brightnessLevel;
 
 @property (nonatomic, strong) Display *display;
+@property (nonatomic, weak) DisplayUnitView *parent;
 
 @end
 

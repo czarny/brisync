@@ -12,7 +12,7 @@
 
 @interface DisplayManager : NSObject
 
-@property(nonatomic, readonly) Display *builtinDisplay;
+@property(nonatomic, readonly) Display *builtInDisplay;
 @property(nonatomic, readonly) NSArray<Display *> *externalDisplays;
 
 - (NSString *)getDisplayName:(CGDirectDisplayID)display;

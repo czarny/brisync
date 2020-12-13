@@ -54,7 +54,7 @@ NSString *DisplayGetDescription(CGDirectDisplayID display, UInt8 type) {
             Display *display = [[Display alloc] initWithID:displayID andManager:self];
 
             if(display.isBuiltIn) {
-                self->_builtinDisplay = display;
+                self->_builtInDisplay = display;
             }
             else {
                 [external_displays addObject:display];

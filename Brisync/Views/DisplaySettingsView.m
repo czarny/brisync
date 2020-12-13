@@ -25,7 +25,8 @@
     self.display.brightnessMap = map;
 
     // Update brightness settings
-    [self.display adjustToLevel:self.brightnessLevel.doubleValue];
+    NSUInteger procent = [self.display adjustToLevel:self.brightnessLevel.doubleValue];
+    self.parent.slider.intValue = (int)procent;
 }
 
 

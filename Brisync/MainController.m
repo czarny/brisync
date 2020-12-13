@@ -112,7 +112,7 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 
 
 - (void)onBrightnessCheck:(NSTimer *)sender {
-    NSInteger brightness = self.displayManager.builtinDisplay.brightness;
+    NSInteger brightness = self.displayManager.builtInDisplay.brightness;
 
     if(brightness != self->_lastBrightness) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"BuildInBrigthnessChange" object:@(brightness)];
@@ -148,6 +148,7 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
     for(Display *display in self.displayManager.externalDisplays) {
         DisplayUnitView *unit = [DisplayUnitXib initDisplayUnitView];
         unit.display = display;
+        unit.builtInDisplay = self.displayManager.builtInDisplay;
 
         NSMenuItem *menu_item = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
         menu_item.view = unit;

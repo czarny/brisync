@@ -16,6 +16,7 @@
 - (IBAction)onMapClick:(id)sender {
     DisplaySettingsView *settings = [DisplayUnitXib initDisplaySettingsView];
     settings.display = self.display;
+    settings.brightnessLevel.doubleValue = self.builtInDisplay.brightness;
 
     settings.slider0.intValue = [self.display.brightnessMap[0] intValue];
     settings.slider1.intValue = [self.display.brightnessMap[1] intValue];
