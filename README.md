@@ -3,19 +3,14 @@ Synchronize your external display brightness with built-in display.
 
 # How it works
 Application reads current brightness of your built-in display and passes it to external displays via DDC interface.
-
-You can adjust brightness by a menu in the system status bar or hotkeys:
-- brightness down: ⇧ + ⌃ + F1,
-- brightness up: ⇧ + ⌃ + F2.
-
-Adjusting brightness in the menu changes internal brightness factor for this display so future brightness updates match your preferences.
+Brightness is calculaded based on map dedicated for display. 
 
 # How to install
 ```{bash}
 brew cask install brisync
 ```
 ##### or
-Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.2.0/Brisync.zip). Extract it and copy to your /Applications directory.
+Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.3.0/Brisync.zip). Extract it and copy to your /Applications directory.
 
 ##### Tested displays
 * DELL U2415
