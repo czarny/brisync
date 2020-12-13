@@ -12,6 +12,9 @@ brew cask install brisync
 ##### or
 Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.3.0/Brisync.zip). Extract it and copy to your /Applications directory.
 
+# Donate
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?hosted_button_id=NL7L7KNN7VBFC)
+
 ##### Tested displays
 * ASUS AS239
 * BenQ BL2420U
