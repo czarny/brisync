@@ -16,6 +16,7 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * ASUS AS239
 * BenQ BL2420U
 * BenQ PD2700U
+* DELL P2715Q
 * DELL U2415
 * DELL U2412M
 * DELL U2515H
