@@ -54,13 +54,6 @@
     exit(0);
 }
 
-- (IBAction)onPreferences:(id)sender {
-    [NSApp activateIgnoringOtherApps: YES];
-    [self.preferencesPanel center];
-    [self.preferencesPanel makeKeyAndOrderFront:sender];
-}
-
-
 - (IBAction)onAbout:(id)sender {
     [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     [[NSApplication sharedApplication] orderFrontStandardAboutPanel:sender];
