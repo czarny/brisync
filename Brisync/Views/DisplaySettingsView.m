@@ -24,14 +24,14 @@
     map[slider.tag] = @(slider.intValue);
     self.display.brightnessMap = map;
 
-    NSInteger new_brightness = (slider.intValue * self.display.maxBrightnessValue) / 100;   // Scaled value for display
-    self.display.brightness = new_brightness;
+    // Update brightness settings
+    [self.display adjustToLevel:self.brightnessLevel.doubleValue];
 }
 
 
 - (void)onBrightnessChange:(NSNotification *)notification {
     NSInteger brightness = [notification.object intValue];
-    self.sliderBrightness.intValue = brightness;
+    self.brightnessLevel.doubleValue = brightness;
 }
 
 @end

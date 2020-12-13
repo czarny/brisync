@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider8;
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider9;
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider10;
-@property (nonatomic, readwrite) IBOutlet NSSlider *sliderBrightness;
+@property (nonatomic, readwrite) IBOutlet NSProgressIndicator *brightnessLevel;
 
 @property (nonatomic, strong) Display *display;
 

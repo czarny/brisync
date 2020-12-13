@@ -118,22 +118,12 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
         [[NSNotificationCenter defaultCenter] postNotificationName:@"BuildInBrigthnessChange" object:@(brightness)];
         
         for(Display *display in self.displayManager.externalDisplays) {
-            NSUInteger scope = brightness / 10;
-            NSInteger x = brightness % 10;
-            NSInteger x0 = [display.brightnessMap[scope] integerValue];
-            NSInteger x1 = [display.brightnessMap[scope+1] integerValue];
-            CGFloat a = (x1 - x0) / 10;
-            NSUInteger map_value = a * x + x0;
+            // Adjust display brightness
+            NSUInteger procent = [display adjustToLevel:brightness];
 
-            // Update brightness
-            NSInteger procent = MIN((int)(map_value), 100);
-            NSInteger new_brightness = (procent * display.maxBrightnessValue) / 100;
-            display.brightness = new_brightness;
-
+            // Update view
             DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[@(display.ID)] view];
             [unit.slider setDoubleValue:procent];
-
-            NSLog(@"Macbook: %d %@: %d", brightness, display.name, new_brightness);
         }
     }
 

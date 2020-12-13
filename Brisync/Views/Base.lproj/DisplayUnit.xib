@@ -85,10 +85,10 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYI-BK-l72">
-                                <rect key="frame" x="0.0" y="156" width="255" height="54"/>
+                                <rect key="frame" x="0.0" y="154" width="255" height="56"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8BB-FN-vU7">
-                                        <rect key="frame" x="-2" y="38" width="137" height="16"/>
+                                        <rect key="frame" x="-2" y="40" width="137" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Max brightness value:" id="yOO-0O-P22">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -96,13 +96,13 @@
                                         </textFieldCell>
                                     </textField>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="mAl-vY-d60">
-                                        <rect key="frame" x="141" y="46" width="50" height="8"/>
+                                        <rect key="frame" x="141" y="48" width="50" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="lR3-pX-MCy"/>
                                         </constraints>
                                     </customView>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-zV-7Ej">
-                                        <rect key="frame" x="196" y="30" width="63" height="25"/>
+                                        <rect key="frame" x="196" y="32" width="63" height="25"/>
                                         <popUpButtonCell key="cell" type="push" title="100" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LSu-Rf-NJy" id="due-eU-Gzy">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -127,7 +127,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7z-UM-bNw">
-                                <rect key="frame" x="0.0" y="28" width="300" height="120"/>
+                                <rect key="frame" x="0.0" y="26" width="300" height="120"/>
                                 <subviews>
                                     <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p8d-ml-Bzz">
                                         <rect key="frame" x="-2" y="26" width="24" height="96"/>
@@ -237,10 +237,9 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oHp-fH-nyM">
-                                <rect key="frame" x="-2" y="-6" width="96" height="28"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="rq0-De-8RL"/>
-                            </slider>
+                            <progressIndicator maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="0Dm-gC-qgz">
+                                <rect key="frame" x="0.0" y="-1" width="100" height="20"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VJX-gT-Tli" secondAttribute="trailing" id="PZy-jX-LIe"/>
@@ -268,6 +267,7 @@
                 </constraints>
             </view>
             <connections>
+                <outlet property="brightnessLevel" destination="0Dm-gC-qgz" id="SZH-zw-AKZ"/>
                 <outlet property="name" destination="VJX-gT-Tli" id="Gbh-Is-fvH"/>
                 <outlet property="slider0" destination="p8d-ml-Bzz" id="XdS-BH-mSF"/>
                 <outlet property="slider1" destination="MH4-7u-TKR" id="Jeo-6y-iub"/>
@@ -280,7 +280,6 @@
                 <outlet property="slider7" destination="wmh-SJ-gwL" id="rth-cX-dt8"/>
                 <outlet property="slider8" destination="uRV-eS-K9H" id="U2o-Le-yjM"/>
                 <outlet property="slider9" destination="OZU-fR-bAV" id="qkM-53-qAd"/>
-                <outlet property="sliderBrightness" destination="oHp-fH-nyM" id="wqk-hp-blF"/>
             </connections>
             <point key="canvasLocation" x="177" y="-352"/>
         </window>

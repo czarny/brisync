@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (instancetype)initWithID:(CGDirectDisplayID)ID andManager:(DisplayManager *)manager;
+- (NSUInteger)adjustToLevel:(NSUInteger)brightness;
 
 @end
 
