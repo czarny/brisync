@@ -15,6 +15,7 @@
 
 - (IBAction)onMapClick:(id)sender {
     DisplaySettingsView *settings = [DisplayUnitXib initDisplaySettingsView];
+    settings.parent = self;
     settings.display = self.display;
     settings.brightnessLevel.doubleValue = self.builtInDisplay.brightness;
 
@@ -30,25 +31,9 @@
     settings.slider9.intValue = [self.display.brightnessMap[9] intValue];
     settings.slider10.intValue = [self.display.brightnessMap[10] intValue];
 
-
     [NSApp activateIgnoringOtherApps: YES];
     [settings center];
     [settings makeKeyAndOrderFront:sender];
 }
 
-
-- (IBAction)onSliderValueChanged:(NSSlider *)slider {
-    NSInteger old_brightness = self.display.brightness;
-    NSInteger new_brightness = (slider.intValue * self.display.maxBrightnessValue) / 100;   // Scaled value for display
-    self.display.brightness = new_brightness;
-
-//    // Update the map
-//    NSUInteger start = old_brightness / 10;
-//    NSInteger y = new_brightness % 10;
-//    NSInteger x0 = [display.brightnessMap[scope] integerValue];
-//    NSInteger x1 = [display.brightnessMap[scope+1] integerValue];
-//    CGFloat a = (x1 - x0) / 10;
-//    NSUInteger map_value = a * x + x0;
-}
 @end
-

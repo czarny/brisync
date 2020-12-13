@@ -37,7 +37,6 @@
     self = [super init];
     if(self) {
         [self initBrightnessCheckTimer];
-        [self registerHotKeys];
     }
 
     return self;
@@ -48,49 +47,6 @@
     NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(onBrightnessCheck:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];   // Run in common mode to fire when status item is open
 }
-
-
-- (void)registerHotKeys {
-    EventHotKeyRef gMyHotKeyRef;
-    EventHotKeyID gMyHotKeyID;
-    EventTypeSpec eventType;
-    eventType.eventClass=kEventClassKeyboard;
-    eventType.eventKind=kEventHotKeyPressed;
-
-    InstallApplicationEventHandler(&OnHotKeyEvent, 1, &eventType, (void *)CFBridgingRetain(self), NULL);
-
-    gMyHotKeyID.signature='htk1';
-    gMyHotKeyID.id=1;
-    RegisterEventHotKey(kVK_F1, shiftKey+controlKey, gMyHotKeyID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
-
-    gMyHotKeyID.signature='htk2';
-    gMyHotKeyID.id=2;
-    RegisterEventHotKey(kVK_F2, shiftKey+controlKey, gMyHotKeyID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
-}
-
-
-OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *userData) {
-    MainController *_self = (__bridge MainController *)userData;
-    EventHotKeyID hk_com;
-    GetEventParameter(theEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(hk_com), NULL, &hk_com);
-
-    NSInteger change = 0;
-    if(hk_com.id == 1) {
-        change = -5;
-    }
-    else if(hk_com.id == 2) {
-        change = 5;
-    }
-
-    for(Display *display in _self.displayManager.externalDisplays) {
-        DisplayUnitView *unit = (DisplayUnitView *)[_self->_displayMenuItems[@(display.ID)] view];
-        unit.slider.doubleValue = MIN(100, MAX(unit.slider.doubleValue + change, 0));
-      // TODO:  [_self onSliderValueChanged:unit.slider];
-    }
-
-    return noErr;
-}
-
 
 #pragma mark Events
 
@@ -120,10 +76,10 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
         for(Display *display in self.displayManager.externalDisplays) {
             // Adjust display brightness
             NSUInteger procent = [display adjustToLevel:brightness];
-
+            display.brightness = procent;
             // Update view
             DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[@(display.ID)] view];
-            [unit.slider setDoubleValue:procent];
+            unit.brigthness.stringValue = [NSString stringWithFormat:@"%d%%", (int)procent];
         }
     }
 
@@ -147,6 +103,7 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 
     for(Display *display in self.displayManager.externalDisplays) {
         DisplayUnitView *unit = [DisplayUnitXib initDisplayUnitView];
+        unit.name.stringValue = display.name;
         unit.display = display;
         unit.builtInDisplay = self.displayManager.builtInDisplay;
 

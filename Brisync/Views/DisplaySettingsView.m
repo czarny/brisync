@@ -26,7 +26,8 @@
 
     // Update brightness settings
     NSUInteger procent = [self.display adjustToLevel:self.brightnessLevel.doubleValue];
-    self.parent.slider.intValue = (int)procent;
+    self.display.brightness = procent;
+    self.parent.brigthness.stringValue = [NSString stringWithFormat:@"%d%%", (int)procent];
 }
 
 

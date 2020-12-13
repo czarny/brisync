@@ -53,7 +53,8 @@
 
 
 - (void)setBrightness:(NSInteger)brightness {
-    [self.manager setBrightness:brightness forDisplay:self.ID];
+    NSInteger new_brightness = (brightness * self.maxBrightnessValue) / 100;
+    [self.manager setBrightness:new_brightness forDisplay:self.ID];
 }
 
 
@@ -86,15 +87,13 @@
 - (NSUInteger)adjustToLevel:(NSUInteger)brightness {
     NSUInteger scope = brightness / 10;
     NSInteger x = brightness % 10;
-    NSInteger x0 = [self.brightnessMap[scope] integerValue];
-    NSInteger x1 = [self.brightnessMap[scope+1] integerValue];
-    CGFloat a = (x1 - x0) / 10;
-    NSUInteger map_value = a * x + x0;
+    NSInteger y0 = [self.brightnessMap[scope] integerValue];
+    NSInteger y1 = [self.brightnessMap[scope+1] integerValue];
+    float a = (y1 - y0) / 10.0;
+    NSUInteger map_value = roundf(a * x + y0);
 
     // Update brightness
     NSInteger procent = MIN((int)(map_value), 100);
-    NSInteger new_brightness = (procent * self.maxBrightnessValue) / 100;
-    self.brightness = new_brightness;
     return procent;
 }
 @end
