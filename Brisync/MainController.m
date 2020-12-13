@@ -146,7 +146,7 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
     self->_displayManager = [DisplayManager new];
 
     for(Display *display in self.displayManager.externalDisplays) {
-        DisplayUnitView *unit = [self createDisplayUnitView];
+        DisplayUnitView *unit = [DisplayUnitXib initDisplayUnitView];
         unit.display = display;
 
         NSMenuItem *menu_item = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
@@ -157,16 +157,6 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
     }
 
     self->_lastBrightness = 0;  // Force brightness sync
-}
-
-
-#pragma mark Private
-
-- (DisplayUnitView *)createDisplayUnitView {
-    DisplayUnitXib *xib = [DisplayUnitXib new];
-    [[NSBundle mainBundle] loadNibNamed:@"DisplayUnit" owner:xib topLevelObjects:nil];
-    DisplayUnitView *result = xib.displayUnitView;
-    return result;
 }
 
 @end

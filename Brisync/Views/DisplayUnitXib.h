@@ -8,12 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DisplayUnitView.h"
+#import "DisplaySettingsView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DisplayUnitXib : NSObject
 
 @property (nonatomic, readwrite) IBOutlet DisplayUnitView *displayUnitView;
+@property (nonatomic, readwrite) IBOutlet DisplaySettingsView *settingsPanel;
+
++ (DisplayUnitView *)initDisplayUnitView;
++ (DisplaySettingsView *)initDisplaySettingsView;
 
 @end
 

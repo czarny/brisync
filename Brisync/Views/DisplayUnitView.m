@@ -7,38 +7,32 @@
 //
 
 #import "DisplayUnitView.h"
+#import "DisplayUnitXib.h"
 
 
 
 @implementation DisplayUnitView
 
-- (void)setDisplay:(Display *)display {
-    self->_display = display;
-    self.settingsPanel.display = display;
-
-    self.name.stringValue = display.name;
-    self.settingsPanel.name.stringValue = display.name;
-}
-
 - (IBAction)onMapClick:(id)sender {
-    self.settingsPanel.slider0.intValue = [self.display.brightnessMap[0] intValue];
-    self.settingsPanel.slider1.intValue = [self.display.brightnessMap[1] intValue];
-    self.settingsPanel.slider2.intValue = [self.display.brightnessMap[2] intValue];
-    self.settingsPanel.slider3.intValue = [self.display.brightnessMap[3] intValue];
-    self.settingsPanel.slider4.intValue = [self.display.brightnessMap[4] intValue];
-    self.settingsPanel.slider5.intValue = [self.display.brightnessMap[5] intValue];
-    self.settingsPanel.slider6.intValue = [self.display.brightnessMap[6] intValue];
-    self.settingsPanel.slider7.intValue = [self.display.brightnessMap[7] intValue];
-    self.settingsPanel.slider8.intValue = [self.display.brightnessMap[8] intValue];
-    self.settingsPanel.slider9.intValue = [self.display.brightnessMap[9] intValue];
-    self.settingsPanel.slider10.intValue = [self.display.brightnessMap[10] intValue];
+    DisplaySettingsView *settings = [DisplayUnitXib initDisplaySettingsView];
+    settings.display = self.display;
 
+    settings.slider0.intValue = [self.display.brightnessMap[0] intValue];
+    settings.slider1.intValue = [self.display.brightnessMap[1] intValue];
+    settings.slider2.intValue = [self.display.brightnessMap[2] intValue];
+    settings.slider3.intValue = [self.display.brightnessMap[3] intValue];
+    settings.slider4.intValue = [self.display.brightnessMap[4] intValue];
+    settings.slider5.intValue = [self.display.brightnessMap[5] intValue];
+    settings.slider6.intValue = [self.display.brightnessMap[6] intValue];
+    settings.slider7.intValue = [self.display.brightnessMap[7] intValue];
+    settings.slider8.intValue = [self.display.brightnessMap[8] intValue];
+    settings.slider9.intValue = [self.display.brightnessMap[9] intValue];
+    settings.slider10.intValue = [self.display.brightnessMap[10] intValue];
 
 
     [NSApp activateIgnoringOtherApps: YES];
-
-    [self.settingsPanel center];
-    [self.settingsPanel makeKeyAndOrderFront:sender];
+    [settings center];
+    [settings makeKeyAndOrderFront:sender];
 }
 
 
