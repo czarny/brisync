@@ -37,7 +37,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="q8N-9b-fyt"/>
                     </constraints>
-                    <buttonCell key="cell" type="push" title="S" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x6Q-LM-stp">
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="Settings" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x6Q-LM-stp">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="11"/>
                     </buttonCell>
@@ -77,8 +77,8 @@
                         <rect key="frame" x="8" y="8" width="300" height="234"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VJX-gT-Tli">
-                                <rect key="frame" x="-2" y="218" width="37" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Label" id="fCA-mM-4Me">
+                                <rect key="frame" x="-2" y="218" width="304" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="fCA-mM-4Me">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -242,6 +242,10 @@
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="rq0-De-8RL"/>
                             </slider>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VJX-gT-Tli" secondAttribute="trailing" id="PZy-jX-LIe"/>
+                            <constraint firstItem="VJX-gT-Tli" firstAttribute="leading" secondItem="Ilv-9f-NKH" secondAttribute="leading" id="ivF-Qz-RSe"/>
+                        </constraints>
                         <visibilityPriorities>
                             <integer value="1000"/>
                             <integer value="1000"/>
@@ -281,4 +285,7 @@
             <point key="canvasLocation" x="177" y="-352"/>
         </window>
     </objects>
+    <resources>
+        <image name="Settings" width="16" height="16"/>
+    </resources>
 </document>
