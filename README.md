@@ -25,3 +25,4 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * Fujitsu P27T-7
 * IIYAMA PL2779Q
 * LG IPS235
+* LG 38WK95W-C
