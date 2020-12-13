@@ -13,13 +13,14 @@ brew cask install brisync
 Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.3.0/Brisync.zip). Extract it and copy to your /Applications directory.
 
 ##### Tested displays
+* ASUS AS239
+* BenQ BL2420U
 * DELL U2415
 * DELL U2412M
 * DELL U2515H
 * DELL U2717D
 * DELL U3818DW
-* LG IPS235
-* IIYAMA PL2779Q
-* ASUS AS239
-* Fujitsu P27T-7
 * Eizo FlexScan EV2436W
+* Fujitsu P27T-7
+* IIYAMA PL2779Q
+* LG IPS235
