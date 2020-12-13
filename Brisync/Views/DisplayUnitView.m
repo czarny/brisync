@@ -17,6 +17,7 @@
     DisplaySettingsView *settings = [DisplayUnitXib initDisplaySettingsView];
     settings.parent = self;
     settings.display = self.display;
+    settings.name.stringValue = self.name.stringValue;
     settings.brightnessLevel.doubleValue = self.builtInDisplay.brightness;
 
     settings.slider0.intValue = [self.display.brightnessMap[0] intValue];
