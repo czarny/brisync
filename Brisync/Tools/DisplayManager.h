@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Display.h"
 
 
 @interface DisplayManager : NSObject
 
-@property(nonatomic, readonly) CGDirectDisplayID builtinDisplay;
-@property(nonatomic, readonly) NSArray *externalDisplays;
+@property(nonatomic, readonly) Display *builtinDisplay;
+@property(nonatomic, readonly) NSArray<Display *> *externalDisplays;
 
 - (NSString *)getDisplayName:(CGDirectDisplayID)display;
 - (NSString *)getDisplaySerial:(CGDirectDisplayID)display;
+- (BOOL)getIsBuiltIn:(CGDirectDisplayID)display;
 - (NSInteger)getDisplayBrightness:(CGDirectDisplayID)display;
 - (void)setBrightness:(NSInteger)brightness forDisplay:(CGDirectDisplayID)display;
 

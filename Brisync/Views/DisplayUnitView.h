@@ -7,11 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DisplaySettingsView.h"
+#import "Display.h"
 
 
 @interface DisplayUnitView : NSView
 
 @property (nonatomic, readwrite) IBOutlet NSTextField *name;
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider;
+@property (nonatomic, readwrite) IBOutlet DisplaySettingsView *settingsPanel;
+
+
+@property (nonatomic, strong) Display *display;
 
 @end

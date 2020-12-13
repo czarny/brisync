@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -43,62 +43,17 @@
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="eRd-gM-5ql">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1636" y="215" width="367" height="424"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="contentRect" x="1636" y="215" width="367" height="330"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1175"/>
             <view key="contentView" id="1pz-6o-sC5">
-                <rect key="frame" x="0.0" y="0.0" width="367" height="424"/>
+                <rect key="frame" x="0.0" y="0.0" width="367" height="330"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxr-6q-xkK">
-                        <rect key="frame" x="16" y="16" width="335" height="392"/>
+                        <rect key="frame" x="16" y="16" width="335" height="298"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYN-P7-gc9">
-                                <rect key="frame" x="0.0" y="341" width="256" height="51"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-KY-cin">
-                                        <rect key="frame" x="-2" y="35" width="137" height="16"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Max brightness value:" id="bQd-2q-2Bf">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="392-xV-ctR">
-                                        <rect key="frame" x="141" y="43" width="50" height="8"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="8" id="FCX-a3-ygB"/>
-                                        </constraints>
-                                    </customView>
-                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m8d-qm-3Lf">
-                                        <rect key="frame" x="197" y="27" width="62" height="25"/>
-                                        <popUpButtonCell key="cell" type="push" title="100" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="HH0-y1-Isd" id="DyH-2b-r24">
-                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                            <menu key="menu" id="mhb-bt-zzN">
-                                                <items>
-                                                    <menuItem title="100" state="on" id="HH0-y1-Isd"/>
-                                                    <menuItem title="255" id="cpk-aF-d5J"/>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                        <connections>
-                                            <binding destination="3xo-4i-BB4" name="selectedIndex" keyPath="values.MaxBrightnessValue" id="QW3-UB-MGp"/>
-                                        </connections>
-                                    </popUpButton>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VaI-pu-Q8Y">
-                                <rect key="frame" x="-2" y="317" width="60" height="16"/>
+                                <rect key="frame" x="-2" y="282" width="60" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Hotkeys:" id="nrO-85-s26">
                                     <font key="font" metaFont="systemSemibold" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -106,10 +61,10 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4f-Nt-oZR">
-                                <rect key="frame" x="0.0" y="293" width="335" height="16"/>
+                                <rect key="frame" x="0.0" y="110" width="334" height="164"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NTR-Bz-e8P">
-                                        <rect key="frame" x="-2" y="0.0" width="204" height="16"/>
+                                        <rect key="frame" x="-2" y="148" width="204" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="External display brightness down" id="A5C-gB-o0n">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -117,13 +72,13 @@
                                         </textFieldCell>
                                     </textField>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="8c4-4O-n7Q">
-                                        <rect key="frame" x="208" y="8" width="50" height="8"/>
+                                        <rect key="frame" x="208" y="156" width="50" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="AXl-y6-foC"/>
                                         </constraints>
                                     </customView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nL8-bO-k39">
-                                        <rect key="frame" x="264" y="0.0" width="73" height="16"/>
+                                        <rect key="frame" x="264" y="148" width="72" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="⇧ + ⌃ + F1" id="eFg-pn-00n">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -143,7 +98,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M01-Sg-pxV">
-                                <rect key="frame" x="0.0" y="269" width="320" height="16"/>
+                                <rect key="frame" x="0.0" y="86" width="319" height="16"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W6i-Dp-3Gh">
                                         <rect key="frame" x="-2" y="0.0" width="187" height="16"/>
@@ -160,7 +115,7 @@
                                         </constraints>
                                     </customView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="An9-iL-8nR">
-                                        <rect key="frame" x="247" y="0.0" width="75" height="16"/>
+                                        <rect key="frame" x="247" y="0.0" width="74" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="⇧ + ⌃ + F2" id="zdc-ea-3Gw">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -179,147 +134,14 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ngF-Bx-iwS">
-                                <rect key="frame" x="-2" y="245" width="108" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Brightness map:" id="cNw-jF-ibd">
-                                    <font key="font" metaFont="systemSemibold" size="13"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ean-pZ-keU">
-                                <rect key="frame" x="0.0" y="87" width="335" height="150"/>
-                                <subviews>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cqr-Md-dGe">
-                                        <rect key="frame" x="-2" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="Zm9-wS-gnB"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="sw5-cB-u3E"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider0" id="fcW-D7-62b"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gAd-Lb-tQi">
-                                        <rect key="frame" x="30" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="wcG-Sp-jk6"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="Ke4-c4-lLm"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider1" id="aMR-wq-6uP"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dZI-VQ-fa5">
-                                        <rect key="frame" x="62" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="ykv-Mr-w4A"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="Yw4-sp-ybF"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider2" id="0Aj-Aa-oAE"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tOj-qM-fBv">
-                                        <rect key="frame" x="94" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="bG9-Ju-UmH"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="Gip-q4-MAl"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider3" id="8iL-hE-46B"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FH0-qr-rmx">
-                                        <rect key="frame" x="126" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="90.71875" tickMarkPosition="right" sliderType="linear" id="Cy2-5B-DjQ">
-                                            <connections>
-                                                <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider4" id="MXd-uE-sLR"/>
-                                            </connections>
-                                        </sliderCell>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="YDj-8E-JC0"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewY-8W-qX9">
-                                        <rect key="frame" x="158" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="flD-Mw-MGg"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="5aE-wu-stC"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider5" id="H5a-EP-j1P"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4PS-i8-h7c">
-                                        <rect key="frame" x="190" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="GiH-Kq-Hv8"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="oGb-08-DxX"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider6" id="VCc-Sq-T6n"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SiY-JT-JzI">
-                                        <rect key="frame" x="222" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="FyQ-23-lLK"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="JaO-f8-Hhw"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider7" id="Oij-bE-FT7"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jul-Me-c33">
-                                        <rect key="frame" x="254" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="rC5-0h-joN"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="lf5-dh-j9l"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider8" id="FSs-2U-x4w"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-3W-pfl">
-                                        <rect key="frame" x="286" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="mqU-ov-bjw"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="6aa-TM-aOc"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider9" id="Z0C-cu-LwO"/>
-                                        </connections>
-                                    </slider>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-fh-EQI">
-                                        <rect key="frame" x="318" y="56" width="19" height="96"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="JG5-VH-IJR"/>
-                                        <connections>
-                                            <action selector="onMapValueChanged:" target="0JV-oi-9Zk" id="uyy-Lg-MqV"/>
-                                            <binding destination="3xo-4i-BB4" name="value" keyPath="values.BrightnessMapSlider10" id="kAK-7s-mi7"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="XEI-N0-C1S"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="ATP-mR-MpA">
-                                <rect key="frame" x="0.0" y="29" width="8" height="50"/>
+                                <rect key="frame" x="0.0" y="28" width="8" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="8" id="ZrO-3X-Ff2"/>
                                 </constraints>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-cE-dhT">
-                                <rect key="frame" x="-6" y="-7" width="77" height="32"/>
+                                <rect key="frame" x="-7" y="-7" width="72" height="32"/>
                                 <buttonCell key="cell" type="push" title="About" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xHR-zM-MAd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -329,14 +151,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="ean-pZ-keU" firstAttribute="leading" secondItem="Pxr-6q-xkK" secondAttribute="leading" id="B6E-jD-jfh"/>
-                            <constraint firstAttribute="trailing" secondItem="ean-pZ-keU" secondAttribute="trailing" id="iNb-fv-jXJ"/>
-                        </constraints>
                         <visibilityPriorities>
-                            <integer value="1000"/>
-                            <integer value="1000"/>
-                            <integer value="1000"/>
                             <integer value="1000"/>
                             <integer value="1000"/>
                             <integer value="1000"/>
@@ -344,9 +159,6 @@
                             <integer value="1000"/>
                         </visibilityPriorities>
                         <customSpacing>
-                            <real value="3.4028234663852886e+38"/>
-                            <real value="3.4028234663852886e+38"/>
-                            <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
@@ -362,23 +174,8 @@
                     <constraint firstItem="Pxr-6q-xkK" firstAttribute="leading" secondItem="1pz-6o-sC5" secondAttribute="leading" constant="16" id="xFd-73-4th"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="476.5" y="141"/>
+            <point key="canvasLocation" x="476.5" y="94"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="3xo-4i-BB4"/>
-        <customObject id="0JV-oi-9Zk" customClass="PreferencesController">
-            <connections>
-                <outlet property="slider0" destination="Cqr-Md-dGe" id="qYp-Zw-eVA"/>
-                <outlet property="slider1" destination="gAd-Lb-tQi" id="8Lk-Bo-aug"/>
-                <outlet property="slider10" destination="M1d-fh-EQI" id="9KW-5v-z8i"/>
-                <outlet property="slider2" destination="dZI-VQ-fa5" id="czo-NU-tg5"/>
-                <outlet property="slider3" destination="tOj-qM-fBv" id="mOi-d1-Jjr"/>
-                <outlet property="slider4" destination="FH0-qr-rmx" id="Dbp-PZ-oqV"/>
-                <outlet property="slider5" destination="ewY-8W-qX9" id="IBF-ho-2wh"/>
-                <outlet property="slider6" destination="4PS-i8-h7c" id="bUJ-0N-kDW"/>
-                <outlet property="slider7" destination="SiY-JT-JzI" id="gqX-YC-Jl4"/>
-                <outlet property="slider8" destination="Jul-Me-c33" id="YSf-uo-VvM"/>
-                <outlet property="slider9" destination="vhz-3W-pfl" id="004-Xx-iOQ"/>
-            </connections>
-        </customObject>
     </objects>
 </document>

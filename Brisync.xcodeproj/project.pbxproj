@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4908F0E925840EC1006F7937 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908F0E825840EC1006F7937 /* Display.m */; };
+		4908F0F225841EB1006F7937 /* DisplayUnitXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908F0F125841EB1006F7937 /* DisplayUnitXib.m */; };
+		4908F0F725842418006F7937 /* DisplaySettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908F0F625842418006F7937 /* DisplaySettingsView.m */; };
 		496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040E71E59AA0100EAFED8 /* AppDelegate.m */; };
 		496040EB1E59AA0100EAFED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040EA1E59AA0100EAFED8 /* main.m */; };
 		496040ED1E59AA0100EAFED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496040EC1E59AA0100EAFED8 /* Assets.xcassets */; };
@@ -20,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4908F0E725840EC1006F7937 /* Display.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
+		4908F0E825840EC1006F7937 /* Display.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
+		4908F0F025841EB1006F7937 /* DisplayUnitXib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayUnitXib.h; sourceTree = "<group>"; };
+		4908F0F125841EB1006F7937 /* DisplayUnitXib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayUnitXib.m; sourceTree = "<group>"; };
+		4908F0F525842418006F7937 /* DisplaySettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplaySettingsView.h; sourceTree = "<group>"; };
+		4908F0F625842418006F7937 /* DisplaySettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplaySettingsView.m; sourceTree = "<group>"; };
 		496040E31E59AA0100EAFED8 /* Brisync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		496040E61E59AA0100EAFED8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		496040E71E59AA0100EAFED8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +120,8 @@
 			children = (
 				496041061E59ACC500EAFED8 /* DisplayManager.h */,
 				496041071E59ACC500EAFED8 /* DisplayManager.m */,
+				4908F0E725840EC1006F7937 /* Display.h */,
+				4908F0E825840EC1006F7937 /* Display.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -119,8 +130,12 @@
 			isa = PBXGroup;
 			children = (
 				496041091E59ADBA00EAFED8 /* DisplayUnit.xib */,
+				4908F0F025841EB1006F7937 /* DisplayUnitXib.h */,
+				4908F0F125841EB1006F7937 /* DisplayUnitXib.m */,
 				4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */,
 				4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */,
+				4908F0F525842418006F7937 /* DisplaySettingsView.h */,
+				4908F0F625842418006F7937 /* DisplaySettingsView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +219,10 @@
 			files = (
 				496040EB1E59AA0100EAFED8 /* main.m in Sources */,
 				496041011E59ACA800EAFED8 /* DDC.c in Sources */,
+				4908F0F725842418006F7937 /* DisplaySettingsView.m in Sources */,
+				4908F0E925840EC1006F7937 /* Display.m in Sources */,
 				496040F91E59AA8000EAFED8 /* MainController.m in Sources */,
+				4908F0F225841EB1006F7937 /* DisplayUnitXib.m in Sources */,
 				496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */,
 				496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */,
 				4991A35924460D370089B14B /* PreferencesController.m in Sources */,

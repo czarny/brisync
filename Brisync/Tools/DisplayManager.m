@@ -50,20 +50,20 @@ NSString *DisplayGetDescription(CGDirectDisplayID display, UInt8 type) {
         CGDisplayCount count;
         CGGetActiveDisplayList(kMaxDisplays, displays, &count);
         for(int i = 0; i < count; i++) {
-            CGDirectDisplayID display = displays[i];
+            CGDirectDisplayID displayID = displays[i];
+            Display *display = [[Display alloc] initWithID:displayID andManager:self];
 
-
-            BOOL built_in = CGDisplayIsBuiltin(display);
-            if(built_in) {
+            if(display.isBuiltIn) {
                 self->_builtinDisplay = display;
             }
             else {
-                [external_displays addObject:@(display)];
+                [external_displays addObject:display];
             }
         }
 
         self->_externalDisplays = [external_displays copy];
     }
+
     return self;
 }
 
@@ -76,6 +76,12 @@ NSString *DisplayGetDescription(CGDirectDisplayID display, UInt8 type) {
 
 - (NSString *)getDisplaySerial:(CGDirectDisplayID)display {
     NSString *result = DisplayGetDescription(display, 0xFF);
+    return result;
+}
+
+
+- (BOOL)getIsBuiltIn:(CGDirectDisplayID)display {
+    BOOL result = CGDisplayIsBuiltin(display);
     return result;
 }
 

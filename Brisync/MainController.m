@@ -8,7 +8,7 @@
 
 #import "MainController.h"
 #import "DisplayManager.h"
-#import "DisplayUnitView.h"
+#import "DisplayUnitXib.h"
 #import <EventKit/EventKit.h>
 
 @import Carbon;
@@ -17,14 +17,10 @@
 
 @interface MainController () {
     NSMutableDictionary *_displayMenuItems;
-    NSMutableDictionary *_brightnessFactor;
-
     NSInteger _lastBrightness;
 }
 
 @property(readonly) DisplayManager *displayManager;
-@property(readonly) NSInteger maxBrightnessValue;
-@property(readonly) NSArray *brightnessMap;
 
 @end
 
@@ -36,24 +32,6 @@
     [self loadDisplays];
 }
 
-
-- (NSInteger)maxBrightnessValue {
-    NSInteger options[2] = { 100, 255 };
-    NSInteger index = [[NSUserDefaults standardUserDefaults] integerForKey:@"MaxBrightnessValue"];
-    return options[index];
-}
-
-
-- (NSArray *)brightnessMap {
-    NSMutableArray *result = [NSMutableArray new];
-    for(int i = 0; i< 11; i++) {
-        NSString *key = [NSString stringWithFormat:@"BrightnessMapSlider%d", i];
-        NSNumber *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-        [result addObject:value];
-    }
-
-    return result;
-}
 
 - (instancetype)init {
     self = [super init];
@@ -104,10 +82,10 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
         change = 5;
     }
 
-    for(NSNumber *display_id in _self.displayManager.externalDisplays) {
-        DisplayUnitView *unit = (DisplayUnitView *)[_self->_displayMenuItems[display_id] view];
+    for(Display *display in _self.displayManager.externalDisplays) {
+        DisplayUnitView *unit = (DisplayUnitView *)[_self->_displayMenuItems[@(display.ID)] view];
         unit.slider.doubleValue = MIN(100, MAX(unit.slider.doubleValue + change, 0));
-        [_self onSliderValueChanged:unit.slider];
+      // TODO:  [_self onSliderValueChanged:unit.slider];
     }
 
     return noErr;
@@ -134,27 +112,28 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 
 
 - (void)onBrightnessCheck:(NSTimer *)sender {
-    NSInteger brightness = [self->_displayManager getDisplayBrightness:self->_displayManager.builtinDisplay];
-    NSArray *brightness_map = self.brightnessMap;
+    NSInteger brightness = self.displayManager.builtinDisplay.brightness;
 
     if(brightness != self->_lastBrightness) {
-        for(NSNumber *display_id in self->_displayManager.externalDisplays) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"BuildInBrigthnessChange" object:@(brightness)];
+        
+        for(Display *display in self.displayManager.externalDisplays) {
             NSUInteger scope = brightness / 10;
             NSInteger x = brightness % 10;
-            NSUInteger x0 = [brightness_map[scope] integerValue];
-            NSUInteger x1 = [brightness_map[scope+1] integerValue];
+            NSInteger x0 = [display.brightnessMap[scope] integerValue];
+            NSInteger x1 = [display.brightnessMap[scope+1] integerValue];
             CGFloat a = (x1 - x0) / 10;
             NSUInteger map_value = a * x + x0;
 
-            CGDirectDisplayID display = [display_id intValue];
-            CGFloat factor = [self->_brightnessFactor[display_id] floatValue];
+            // Update brightness
+            NSInteger procent = MIN((int)(map_value), 100);
+            NSInteger new_brightness = (procent * display.maxBrightnessValue) / 100;
+            display.brightness = new_brightness;
 
-            NSInteger procent = MIN((int)(map_value * factor), 100);
-            NSInteger new_brightness = (procent * self.maxBrightnessValue) / 100;
-            [self->_displayManager setBrightness:new_brightness forDisplay:display];
-
-            DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[display_id] view];
+            DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[@(display.ID)] view];
             [unit.slider setDoubleValue:procent];
+
+            NSLog(@"Macbook: %d %@: %d", brightness, display.name, new_brightness);
         }
     }
 
@@ -162,23 +141,7 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 }
 
 
-- (void)onSliderValueChanged:(NSSlider *)slider {
-    CGDirectDisplayID display = (CGDirectDisplayID)slider.tag;
-    NSInteger new_brightness = (slider.intValue * self.maxBrightnessValue) / 100;   // Scaled value for display
-    [self->_displayManager setBrightness:new_brightness forDisplay:display];
 
-    // Calc factor
-    CGFloat factor = (CGFloat)slider.intValue / (CGFloat)self->_lastBrightness;
-    self->_brightnessFactor[@(slider.tag)] = @(factor);
-
-    // Save factor in
-    NSString *serial = [self->_displayManager getDisplaySerial:display];
-    if(serial) {
-        NSMutableDictionary *settings = [self getDisplaySettings:serial];
-        settings[@"brightness_factor"] = @(factor);
-        [[NSUserDefaults standardUserDefaults] setObject:settings forKey:serial];
-    }
-}
 
 
 #pragma mark Public
@@ -186,35 +149,21 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 - (void)loadDisplays {
     // Clean up
     for(NSMenuItem *item in self->_displayMenuItems.allValues) {
-        [self->_statusMenu removeItem:item];
+        [self.statusMenu removeItem:item];
     }
 
     self->_displayMenuItems = [NSMutableDictionary new];
-    self->_brightnessFactor = [NSMutableDictionary new];
     self->_displayManager = [DisplayManager new];
 
-    for(NSNumber *display_id in self->_displayManager.externalDisplays) {
-        CGDirectDisplayID display = [display_id intValue];
-
+    for(Display *display in self.displayManager.externalDisplays) {
         DisplayUnitView *unit = [self createDisplayUnitView];
-        unit.name.stringValue = [self->_displayManager getDisplayName:display];
-        unit.slider.tag = display;
+        unit.display = display;
 
         NSMenuItem *menu_item = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
         menu_item.view = unit;
         [self->_statusMenu insertItem:menu_item atIndex:0];
 
-        self->_displayMenuItems[display_id] = menu_item;
-        self->_brightnessFactor[display_id] = @1.0;
-
-        NSString *serial = [self->_displayManager getDisplaySerial:display];
-        if(serial) {
-            // Restore brightness factor
-            NSDictionary *settings = [self getDisplaySettings:serial];
-            if([settings objectForKey:@"brightness_factor"]) {
-                self->_brightnessFactor[display_id] = settings[@"brightness_factor"];
-            }
-        }
+        self->_displayMenuItems[@(display.ID)] = menu_item;
     }
 
     self->_lastBrightness = 0;  // Force brightness sync
@@ -224,22 +173,10 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 #pragma mark Private
 
 - (DisplayUnitView *)createDisplayUnitView {
-    NSArray *o;
-    [[NSBundle mainBundle] loadNibNamed:@"DisplayUnit" owner:nil topLevelObjects:&o];
-    DisplayUnitView *result = [o.firstObject isKindOfClass:[DisplayUnitView class]]? o.firstObject : o.lastObject;
-    [result.slider setTarget:self];
-    [result.slider setAction:@selector(onSliderValueChanged:)];
-
+    DisplayUnitXib *xib = [DisplayUnitXib new];
+    [[NSBundle mainBundle] loadNibNamed:@"DisplayUnit" owner:xib topLevelObjects:nil];
+    DisplayUnitView *result = xib.displayUnitView;
     return result;
 }
-
-- (NSMutableDictionary *)getDisplaySettings:(NSString *)serial {
-    NSMutableDictionary *result = [NSMutableDictionary new];
-    NSDictionary *settings = [[NSUserDefaults standardUserDefaults] objectForKey:serial];
-    [result addEntriesFromDictionary:settings];
-
-    return result;
-}
-
 
 @end
