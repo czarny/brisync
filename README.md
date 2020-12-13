@@ -24,6 +24,7 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * DELL U2412M
 * DELL U2515H
 * DELL U2717D
+* DELL U2718Q
 * DELL U3818DW
 * Eizo FlexScan EV2436W
 * Fujitsu P27T-7
