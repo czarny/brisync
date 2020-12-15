@@ -3,7 +3,7 @@ Synchronize your external display brightness with built-in display.
 
 # How it works
 Application reads current brightness of your built-in display and passes it to external displays via DDC interface.
-Brightness is calculaded based on map dedicated for display. 
+Brightness of external display is calculated based on curve which is adjusted in the display settings. In order to create the curve set value on sliders for each brightness level of build-in display.
 
 # How to install
 ```{bash}
