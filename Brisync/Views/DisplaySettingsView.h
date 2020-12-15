@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DisplaySettingsView : NSPanel
 
 @property (nonatomic, readwrite) IBOutlet NSTextField *name;
+@property (nonatomic, readwrite) IBOutlet NSPopUpButton *maxBrightness;
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider0;
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider1;
 @property (nonatomic, readwrite) IBOutlet NSSlider *slider2;
