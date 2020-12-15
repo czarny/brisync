@@ -23,6 +23,7 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * DELL U2415
 * DELL U2412M
 * DELL U2515H
+* DELL U2713HM
 * DELL U2717D
 * DELL U2718Q
 * DELL U3818DW
@@ -34,4 +35,3 @@ Download the latest app binary zip file from [here](https://github.com/czarny/Br
 * LG 27UK850
 * LG UltraFine 4K
 * LG UltraFine 5K
-* U2713HM
