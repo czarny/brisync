@@ -7,7 +7,7 @@ Brightness of external display is calculated based on curve which is adjusted in
 
 # How to install
 ```{bash}
-brew cask install brisync
+brew install brisync
 ```
 ##### or
 Download the latest app binary zip file from [here](https://github.com/czarny/Brisync/releases/download/v1.3.1/Brisync.zip). Extract it and copy to your /Applications directory.
