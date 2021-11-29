@@ -85,7 +85,7 @@
 
 
 - (NSUInteger)adjustToLevel:(NSUInteger)brightness {
-    NSUInteger scope = brightness / 10;
+    NSUInteger scope = MIN(brightness / 10, 9);
     NSInteger x = brightness % 10;
     NSInteger y0 = [self.brightnessMap[scope] integerValue];
     NSInteger y1 = [self.brightnessMap[scope+1] integerValue];
