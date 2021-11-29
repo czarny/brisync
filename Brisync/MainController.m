@@ -37,6 +37,7 @@
     self = [super init];
     if(self) {
         [self initBrightnessCheckTimer];
+        [self initWakeUpListener];
     }
 
     return self;
@@ -46,6 +47,11 @@
     // Schedule brightness checking
     NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(onBrightnessCheck:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];   // Run in common mode to fire when status item is open
+}
+
+
+- (void)initWakeUpListener {
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(onWakeUp:) name:NSWorkspaceDidWakeNotification object:nil];
 }
 
 #pragma mark Events
@@ -65,21 +71,30 @@
 
     if(brightness != self->_lastBrightness) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"BuildInBrigthnessChange" object:@(brightness)];
-        
-        for(Display *display in self.displayManager.externalDisplays) {
-            // Adjust display brightness
-            NSUInteger procent = [display adjustToLevel:brightness];
-            display.brightness = procent;
-            // Update view
-            DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[@(display.ID)] view];
-            unit.brigthness.stringValue = [NSString stringWithFormat:@"%d%%", (int)procent];
-        }
+        [self updateDisplayBrightness: brightness];
     }
 
     self->_lastBrightness = brightness;
 }
 
 
+
+- (void)onWakeUp:(id)sender {
+    NSInteger brightness = self.displayManager.builtInDisplay.brightness;
+    [self updateDisplayBrightness:brightness];
+}
+
+
+- (void)updateDisplayBrightness:(NSInteger)brightness {
+    for(Display *display in self.displayManager.externalDisplays) {
+        // Adjust display brightness
+        NSUInteger procent = [display adjustToLevel:brightness];
+        display.brightness = procent;
+        // Update view
+        DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[@(display.ID)] view];
+        unit.brigthness.stringValue = [NSString stringWithFormat:@"%d%%", (int)procent];
+    }
+}
 
 
 
