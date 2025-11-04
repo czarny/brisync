@@ -175,7 +175,6 @@
 				TargetAttributes = {
 					496040E21E59AA0100EAFED8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QP4ULH34WL;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -379,7 +378,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QP4ULH34WL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Brisync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,7 +402,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QP4ULH34WL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Brisync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
