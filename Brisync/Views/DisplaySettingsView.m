@@ -31,11 +31,6 @@
 }
 
 
-- (IBAction)onMaxBrightnessValueChange:(NSPopUpButton *)sender {
-    NSInteger value = sender.titleOfSelectedItem.intValue;
-    self.display.maxBrightnessValue = value;
-}
-
 - (void)onBrightnessChange:(NSNotification *)notification {
     NSInteger brightness = [notification.object intValue];
     self.brightnessLevel.doubleValue = brightness;

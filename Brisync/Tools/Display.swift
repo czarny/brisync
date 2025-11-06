@@ -54,17 +54,6 @@ enum DDCCommand: UInt8 {
         }
     }
 
-    @objc public var maxBrightnessValue: Int {
-        get {
-            return settings["MaxBrightnessValue"] as? Int ?? 100
-        }
-        set {
-            var updated = settings
-            updated["MaxBrightnessValue"] = newValue
-            saveSettings(updated)
-        }
-    }
-
     @objc public func adjustToLevel(_ brightness: UInt) -> UInt {
         let scope = min(brightness / 10, 9)
         let x = Int(brightness % 10)
@@ -82,9 +71,13 @@ enum DDCCommand: UInt8 {
 
 @objc class DDCDisplay: Display {
     let display: AppleSiliconDDC.IOregService
+    let maxBrightnessValue: UInt16
 
     init(display: AppleSiliconDDC.IOregService) {
         self.display = display
+
+        let value = AppleSiliconDDC.read(service: display.service, command: DDCCommand.brightness.rawValue)!
+        self.maxBrightnessValue = value.max
         super.init(name: display.productName, serial: display.alphanumericSerialNumber)
     }
 
@@ -96,7 +89,7 @@ enum DDCCommand: UInt8 {
             return result
         }
         set {
-            let scaled = (newValue * maxBrightnessValue) / 100
+            let scaled = (newValue * Int(maxBrightnessValue)) / 100
             _ = AppleSiliconDDC.write(service: display.service, command: DDCCommand.brightness.rawValue, value: UInt16(exactly: scaled)!)
         }
     }
@@ -120,7 +113,7 @@ enum DDCCommand: UInt8 {
             return result
         }
         set {
-            let scaled = (Float(newValue) * Float(maxBrightnessValue)) / 100.0
+            let scaled = Float(newValue) / 100.0
             DisplayServicesSetBrightness(displayID, scaled)
         }
     }

@@ -16,144 +16,104 @@
         <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="HVC-Zn-wWd" customClass="DisplaySettingsView">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="131" width="276" height="250"/>
+            <rect key="contentRect" x="196" y="131" width="276" height="220"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1728" height="1083"/>
-            <view key="contentView" misplaced="YES" id="l2U-Ar-bj8">
-                <rect key="frame" x="0.0" y="0.0" width="287" height="250"/>
+            <view key="contentView" id="l2U-Ar-bj8">
+                <rect key="frame" x="0.0" y="0.0" width="276" height="220"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fA-ue-Cxg">
-                        <rect key="frame" x="8" y="8" width="271" height="234"/>
+                        <rect key="frame" x="8" y="8" width="260" height="204"/>
                         <subviews>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="odm-2H-gMM">
-                                <rect key="frame" x="-2" y="218" width="275" height="16"/>
+                                <rect key="frame" x="-2" y="188" width="264" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="xik-8B-rtG">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnz-bX-7bB">
-                                <rect key="frame" x="0.0" y="156" width="271" height="54"/>
-                                <subviews>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T2z-WD-TKQ">
-                                        <rect key="frame" x="-2" y="38" width="137" height="16"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Max brightness value:" id="ss8-NA-zk4">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="UsO-Eh-ww0">
-                                        <rect key="frame" x="141" y="46" width="50" height="8"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="8" id="Zzt-A5-qga"/>
-                                        </constraints>
-                                    </customView>
-                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YSU-Xh-fsW">
-                                        <rect key="frame" x="199" y="30" width="72" height="24"/>
-                                        <popUpButtonCell key="cell" type="push" title="50" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="0J1-iS-SJu" id="zEn-wH-QeP">
-                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="message"/>
-                                            <menu key="menu" id="etb-dO-LW4">
-                                                <items>
-                                                    <menuItem title="50" state="on" id="0J1-iS-SJu"/>
-                                                    <menuItem title="100" state="on" id="rSw-hJ-JMB"/>
-                                                    <menuItem title="255" id="wPq-Wr-vUM"/>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                        <connections>
-                                            <action selector="onMaxBrightnessValueChange:" target="HVC-Zn-wWd" id="0h8-wj-Otl"/>
-                                        </connections>
-                                    </popUpButton>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="IQW-CD-YLz">
+                                <rect key="frame" x="0.0" y="172" width="163" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="gz5-ax-Fr2"/>
+                                </constraints>
+                            </customView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-HO-CJ0">
-                                <rect key="frame" x="0.0" y="28" width="256" height="120"/>
+                                <rect key="frame" x="0.0" y="36" width="256" height="128"/>
                                 <subviews>
                                     <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zaq-fr-QJA">
-                                        <rect key="frame" x="0.0" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="0.0" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="atg-OX-SsQ"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="1D1-Vk-fP4"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-Ge-9XO">
-                                        <rect key="frame" x="24" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="24" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="aqu-Ba-BDe"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="J7a-6p-Ll3"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="P4R-Xb-Rxu">
-                                        <rect key="frame" x="48" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="48" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="whp-aj-7A4"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="6qm-hA-j2U"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-Hr-jTd">
-                                        <rect key="frame" x="72" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="72" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="EjD-0e-aCA"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="bZF-aV-Hy7"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="iSH-pf-rMA">
-                                        <rect key="frame" x="96" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="96" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="OYA-c8-wmW"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="VYn-iu-IXk"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="us4-Ua-pwS">
-                                        <rect key="frame" x="120" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="120" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="fo5-HL-VgW"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="5Fm-cu-QiC"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="1L2-4q-cOv">
-                                        <rect key="frame" x="144" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="144" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="emQ-4S-ulA"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="iuu-vO-ccl"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="88F-dg-FYu">
-                                        <rect key="frame" x="168" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="168" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="okt-Rb-bKQ"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="LW3-Bs-WO2"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="rk3-uq-yth">
-                                        <rect key="frame" x="192" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="192" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="nYb-Oz-BOV"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="hR2-j7-04T"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="m2a-WW-916">
-                                        <rect key="frame" x="216" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="216" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="vYz-S9-ME6"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="Cfw-bL-eDs"/>
                                         </connections>
                                     </slider>
                                     <slider horizontalHuggingPriority="750" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="IBs-a2-YaR">
-                                        <rect key="frame" x="240" y="24" width="16" height="96"/>
+                                        <rect key="frame" x="240" y="32" width="16" height="96"/>
                                         <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="lnl-dO-5ek"/>
                                         <connections>
                                             <action selector="onSliderValueChanged:" target="HVC-Zn-wWd" id="2zZ-EK-bjZ"/>
@@ -161,7 +121,7 @@
                                     </slider>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="xbo-El-NSj"/>
+                                    <constraint firstAttribute="height" constant="128" id="xbo-El-NSj"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
@@ -191,7 +151,7 @@
                                 </customSpacing>
                             </stackView>
                             <progressIndicator wantsLayer="YES" maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-Zh-qJP">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="28"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
@@ -221,7 +181,6 @@
             </view>
             <connections>
                 <outlet property="brightnessLevel" destination="vPD-Zh-qJP" id="BIt-5Q-BW8"/>
-                <outlet property="maxBrightness" destination="YSU-Xh-fsW" id="hLb-bG-OcP"/>
                 <outlet property="name" destination="odm-2H-gMM" id="kOs-tR-Jiz"/>
                 <outlet property="slider0" destination="Zaq-fr-QJA" id="OvK-Y0-3aK"/>
                 <outlet property="slider1" destination="Cda-Ge-9XO" id="B9F-3W-lg0"/>
@@ -235,7 +194,7 @@
                 <outlet property="slider8" destination="rk3-uq-yth" id="I6d-3e-522"/>
                 <outlet property="slider9" destination="m2a-WW-916" id="8Ck-WZ-G1B"/>
             </connections>
-            <point key="canvasLocation" x="177" y="-352"/>
+            <point key="canvasLocation" x="177" y="-382"/>
         </window>
     </objects>
 </document>
