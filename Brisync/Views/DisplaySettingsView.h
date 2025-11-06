@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Display.h"
 #import "DisplayUnitView.h"
+#import "Brisync-Swift.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

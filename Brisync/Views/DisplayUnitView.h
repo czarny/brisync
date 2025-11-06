@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Display.h"
+#import "Brisync-Swift.h"
 
 
 @interface DisplayUnitView : NSView
@@ -17,6 +17,6 @@
 
 
 @property (nonatomic, strong) Display *display;
-@property (nonatomic, strong) Display *builtInDisplay;
+@property (nonatomic, strong) Display *mainDisplay;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "MainController.h"
-#import "DisplayManager.h"
 #import "DisplayUnitXib.h"
 #import <EventKit/EventKit.h>
 
@@ -67,7 +66,7 @@
 
 
 - (void)onBrightnessCheck:(NSTimer *)sender {
-    NSInteger brightness = self.displayManager.builtInDisplay.brightness;
+    NSInteger brightness = self.displayManager.appleDisplay.brightness;
 
     if(brightness != self->_lastBrightness) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"BuildInBrigthnessChange" object:@(brightness)];
@@ -80,7 +79,7 @@
 
 
 - (void)onWakeUp:(id)sender {
-    NSInteger brightness = self.displayManager.builtInDisplay.brightness;
+    NSInteger brightness = self.displayManager.appleDisplay.brightness;
     [self updateDisplayBrightness:brightness];
 }
 
@@ -91,7 +90,7 @@
         NSUInteger procent = [display adjustToLevel:brightness];
         display.brightness = procent;
         // Update view
-        DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[@(display.ID)] view];
+        DisplayUnitView *unit = (DisplayUnitView *)[self->_displayMenuItems[display.name] view];
         unit.brigthness.stringValue = [NSString stringWithFormat:@"%d%%", (int)procent];
     }
 }
@@ -113,13 +112,13 @@
         DisplayUnitView *unit = [DisplayUnitXib initDisplayUnitView];
         unit.name.stringValue = display.name;
         unit.display = display;
-        unit.builtInDisplay = self.displayManager.builtInDisplay;
+        unit.mainDisplay = self.displayManager.appleDisplay;
 
         NSMenuItem *menu_item = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
         menu_item.view = unit;
         [self->_statusMenu insertItem:menu_item atIndex:0];
 
-        self->_displayMenuItems[@(display.ID)] = menu_item;
+        self->_displayMenuItems[display.name] = menu_item;
     }
 
     self->_lastBrightness = 0;  // Force brightness sync

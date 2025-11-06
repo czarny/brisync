@@ -18,7 +18,7 @@
     settings.parent = self;
     settings.display = self.display;
     settings.name.stringValue = self.name.stringValue;
-    settings.brightnessLevel.doubleValue = self.builtInDisplay.brightness;
+    settings.brightnessLevel.doubleValue = self.mainDisplay.brightness;
     [settings.maxBrightness selectItemWithTitle:[NSString stringWithFormat:@"%ld", (long)self.display.maxBrightnessValue]];
 
     settings.slider0.intValue = [self.display.brightnessMap[0] intValue];

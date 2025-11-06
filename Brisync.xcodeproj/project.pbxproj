@@ -7,30 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4908F0E925840EC1006F7937 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908F0E825840EC1006F7937 /* Display.m */; };
 		4908F0F225841EB1006F7937 /* DisplayUnitXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908F0F125841EB1006F7937 /* DisplayUnitXib.m */; };
 		4908F0F725842418006F7937 /* DisplaySettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908F0F625842418006F7937 /* DisplaySettingsView.m */; };
 		4908F0FB25865ADC006F7937 /* DisplaySettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4908F0FA25865ADC006F7937 /* DisplaySettings.xib */; };
+		4924D83A2EBB5954001F688A /* AppleSiliconDDC in Frameworks */ = {isa = PBXBuildFile; productRef = 4924D8392EBB5954001F688A /* AppleSiliconDDC */; };
+		4924D83D2EBB598E001F688A /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D83C2EBB598E001F688A /* DisplayManager.swift */; };
+		4924D8402EBB9AE9001F688A /* AppleSiliconDDC in Frameworks */ = {isa = PBXBuildFile; productRef = 4924D83F2EBB9AE9001F688A /* AppleSiliconDDC */; };
+		4924D8422EBB9B3A001F688A /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D8412EBB9B3A001F688A /* Display.swift */; };
+		4924D84B2EBC01A2001F688A /* CoreDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4924D8492EBC0194001F688A /* CoreDisplay.framework */; };
+		4924D84D2EBC01A2001F688A /* DisplayServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4924D84A2EBC0194001F688A /* DisplayServices.framework */; };
 		496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040E71E59AA0100EAFED8 /* AppDelegate.m */; };
 		496040EB1E59AA0100EAFED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040EA1E59AA0100EAFED8 /* main.m */; };
 		496040ED1E59AA0100EAFED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496040EC1E59AA0100EAFED8 /* Assets.xcassets */; };
 		496040F01E59AA0100EAFED8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496040EE1E59AA0100EAFED8 /* MainMenu.xib */; };
 		496040F91E59AA8000EAFED8 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496040F81E59AA8000EAFED8 /* MainController.m */; };
-		496041011E59ACA800EAFED8 /* DDC.c in Sources */ = {isa = PBXBuildFile; fileRef = 496040FB1E59ACA800EAFED8 /* DDC.c */; };
-		496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 496041071E59ACC500EAFED8 /* DisplayManager.m */; };
 		4960410B1E59ADBA00EAFED8 /* DisplayUnit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496041091E59ADBA00EAFED8 /* DisplayUnit.xib */; };
 		4960410E1E59ADCE00EAFED8 /* DisplayUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */; };
 		4991A35924460D370089B14B /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991A35824460D370089B14B /* PreferencesController.m */; };
+		49CD81E02EBD3D54008A3802 /* AppleSiliconDDC in Frameworks */ = {isa = PBXBuildFile; productRef = 49CD81DF2EBD3D54008A3802 /* AppleSiliconDDC */; };
+		49CD81E22EBD4243008A3802 /* AppleSiliconDDC in Frameworks */ = {isa = PBXBuildFile; productRef = 49CD81E12EBD4243008A3802 /* AppleSiliconDDC */; };
+		49CD81E52EBD4263008A3802 /* AppleSiliconDDC in Frameworks */ = {isa = PBXBuildFile; productRef = 49CD81E42EBD4263008A3802 /* AppleSiliconDDC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4908F0E725840EC1006F7937 /* Display.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
-		4908F0E825840EC1006F7937 /* Display.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
 		4908F0F025841EB1006F7937 /* DisplayUnitXib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayUnitXib.h; sourceTree = "<group>"; };
 		4908F0F125841EB1006F7937 /* DisplayUnitXib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayUnitXib.m; sourceTree = "<group>"; };
 		4908F0F525842418006F7937 /* DisplaySettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplaySettingsView.h; sourceTree = "<group>"; };
 		4908F0F625842418006F7937 /* DisplaySettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplaySettingsView.m; sourceTree = "<group>"; };
 		4908F0FA25865ADC006F7937 /* DisplaySettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplaySettings.xib; sourceTree = "<group>"; };
+		4924D83B2EBB598E001F688A /* Brisync-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brisync-Bridging-Header.h"; sourceTree = "<group>"; };
+		4924D83C2EBB598E001F688A /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
+		4924D8412EBB9B3A001F688A /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		4924D8492EBC0194001F688A /* CoreDisplay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDisplay.framework; path = /System/Library/Frameworks/CoreDisplay.framework; sourceTree = "<absolute>"; };
+		4924D84A2EBC0194001F688A /* DisplayServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DisplayServices.framework; path = /System/Library/PrivateFrameworks/DisplayServices.framework; sourceTree = "<absolute>"; };
 		496040E31E59AA0100EAFED8 /* Brisync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		496040E61E59AA0100EAFED8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		496040E71E59AA0100EAFED8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,10 +49,6 @@
 		496040F11E59AA0100EAFED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496040F71E59AA8000EAFED8 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		496040F81E59AA8000EAFED8 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		496040FB1E59ACA800EAFED8 /* DDC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DDC.c; sourceTree = "<group>"; };
-		496040FC1E59ACA800EAFED8 /* DDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDC.h; sourceTree = "<group>"; };
-		496041061E59ACC500EAFED8 /* DisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
-		496041071E59ACC500EAFED8 /* DisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
 		4960410A1E59ADBA00EAFED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DisplayUnit.xib; sourceTree = "<group>"; };
 		4960410C1E59ADCE00EAFED8 /* DisplayUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayUnitView.h; sourceTree = "<group>"; };
 		4960410D1E59ADCE00EAFED8 /* DisplayUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayUnitView.m; sourceTree = "<group>"; };
@@ -57,17 +62,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CD81E02EBD3D54008A3802 /* AppleSiliconDDC in Frameworks */,
+				49CD81E22EBD4243008A3802 /* AppleSiliconDDC in Frameworks */,
+				4924D84B2EBC01A2001F688A /* CoreDisplay.framework in Frameworks */,
+				4924D83A2EBB5954001F688A /* AppleSiliconDDC in Frameworks */,
+				4924D8402EBB9AE9001F688A /* AppleSiliconDDC in Frameworks */,
+				49CD81E52EBD4263008A3802 /* AppleSiliconDDC in Frameworks */,
+				4924D84D2EBC01A2001F688A /* DisplayServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4924D8432EBBE19A001F688A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4924D8492EBC0194001F688A /* CoreDisplay.framework */,
+				4924D84A2EBC0194001F688A /* DisplayServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		496040DA1E59AA0100EAFED8 = {
 			isa = PBXGroup;
 			children = (
-				496040FA1E59ACA800EAFED8 /* ddcctl */,
 				496040E51E59AA0100EAFED8 /* Brisync */,
+				4924D8432EBBE19A001F688A /* Frameworks */,
 				496040E41E59AA0100EAFED8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +114,7 @@
 				496040F81E59AA8000EAFED8 /* MainController.m */,
 				4991A35724460D370089B14B /* PreferencesController.h */,
 				4991A35824460D370089B14B /* PreferencesController.m */,
+				4924D83B2EBB598E001F688A /* Brisync-Bridging-Header.h */,
 				496040E91E59AA0100EAFED8 /* Supporting Files */,
 			);
 			path = Brisync;
@@ -108,22 +130,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		496040FA1E59ACA800EAFED8 /* ddcctl */ = {
-			isa = PBXGroup;
-			children = (
-				496040FB1E59ACA800EAFED8 /* DDC.c */,
-				496040FC1E59ACA800EAFED8 /* DDC.h */,
-			);
-			path = ddcctl;
-			sourceTree = "<group>";
-		};
 		49E0FD7F200A438700FF5C69 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				496041061E59ACC500EAFED8 /* DisplayManager.h */,
-				496041071E59ACC500EAFED8 /* DisplayManager.m */,
-				4908F0E725840EC1006F7937 /* Display.h */,
-				4908F0E825840EC1006F7937 /* Display.m */,
+				4924D8412EBB9B3A001F688A /* Display.swift */,
+				4924D83C2EBB598E001F688A /* DisplayManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 				TargetAttributes = {
 					496040E21E59AA0100EAFED8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 2610;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -193,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 496040DA1E59AA0100EAFED8;
+			packageReferences = (
+				49CD81E32EBD4263008A3802 /* XCRemoteSwiftPackageReference "AppleSiliconDDC" */,
+			);
 			productRefGroup = 496040E41E59AA0100EAFED8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,13 +237,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				496040EB1E59AA0100EAFED8 /* main.m in Sources */,
-				496041011E59ACA800EAFED8 /* DDC.c in Sources */,
 				4908F0F725842418006F7937 /* DisplaySettingsView.m in Sources */,
-				4908F0E925840EC1006F7937 /* Display.m in Sources */,
 				496040F91E59AA8000EAFED8 /* MainController.m in Sources */,
 				4908F0F225841EB1006F7937 /* DisplayUnitXib.m in Sources */,
+				4924D8422EBB9B3A001F688A /* Display.swift in Sources */,
 				496040E81E59AA0100EAFED8 /* AppDelegate.m in Sources */,
-				496041081E59ACC500EAFED8 /* DisplayManager.m in Sources */,
+				4924D83D2EBB598E001F688A /* DisplayManager.swift in Sources */,
 				4991A35924460D370089B14B /* PreferencesController.m in Sources */,
 				4960410E1E59ADCE00EAFED8 /* DisplayUnitView.m in Sources */,
 			);
@@ -373,13 +387,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AUTOMATION_APPLE_EVENTS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = QP4ULH34WL;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KGEF73NV9D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				INFOPLIST_FILE = Brisync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,6 +413,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pro.czarny.brisync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Brisync/Brisync-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -397,13 +433,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AUTOMATION_APPLE_EVENTS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = QP4ULH34WL;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KGEF73NV9D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				INFOPLIST_FILE = Brisync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,6 +459,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pro.czarny.brisync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Brisync/Brisync-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
@@ -439,6 +496,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49CD81DE2EBD3D54008A3802 /* XCRemoteSwiftPackageReference "AppleSiliconDDC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/waydabber/AppleSiliconDDC.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		49CD81E32EBD4263008A3802 /* XCRemoteSwiftPackageReference "AppleSiliconDDC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/czarny/AppleSiliconDDC";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4924D8392EBB5954001F688A /* AppleSiliconDDC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppleSiliconDDC;
+		};
+		4924D83F2EBB9AE9001F688A /* AppleSiliconDDC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppleSiliconDDC;
+		};
+		49CD81DF2EBD3D54008A3802 /* AppleSiliconDDC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49CD81DE2EBD3D54008A3802 /* XCRemoteSwiftPackageReference "AppleSiliconDDC" */;
+			productName = AppleSiliconDDC;
+		};
+		49CD81E12EBD4243008A3802 /* AppleSiliconDDC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppleSiliconDDC;
+		};
+		49CD81E42EBD4263008A3802 /* AppleSiliconDDC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49CD81E32EBD4263008A3802 /* XCRemoteSwiftPackageReference "AppleSiliconDDC" */;
+			productName = AppleSiliconDDC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 496040DB1E59AA0100EAFED8 /* Project object */;
 }
