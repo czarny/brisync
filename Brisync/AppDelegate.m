@@ -46,7 +46,7 @@ static void displayConfigurationChanged(CGDirectDisplayID display, CGDisplayChan
 
     self->_statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     self->_statusItem.button.image = [NSImage imageNamed:@"Icon"];
-    self->_statusItem.toolTip = [NSString stringWithFormat:@"Brisync %@", version];
+    self->_statusItem.button.toolTip = [NSString stringWithFormat:@"Brisync %@", version];
     self->_statusItem.menu = self.mainController.statusMenu;
 }
 
