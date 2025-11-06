@@ -4,6 +4,18 @@
 [![macOS](https://img.shields.io/badge/macOS-10.11+-blue.svg)](https://www.apple.com/macos)
 [![Release](https://img.shields.io/github/v/release/czarny/brisync)](https://github.com/czarny/Brisync/releases)
 
+---
+
+<div align="center">
+
+## 🎉 **NEW: Apple Silicon Mac Support!** 🎉
+
+**Brisync 2 now fully supports Apple Silicon Macs!**
+
+</div>
+
+---
+
 > Automatically synchronize your external display brightness with your Mac's built-in display
 
 Brisync is a lightweight macOS menu bar application that intelligently adjusts the brightness of your external monitors to match your Mac's built-in display, creating a seamless viewing experience.
