@@ -24,7 +24,7 @@ Brisync is a lightweight macOS menu bar application that intelligently adjusts t
 
 - 🔄 **Automatic Brightness Sync** - External displays automatically adjust when you change your Mac's brightness
 - 📊 **Custom Brightness Curves** - Fine-tune brightness mapping for each external display individually
-- 🎛️ **DDC/CI Protocol** - Brightness is adjusted
+- 🎛️ **DDC/CI Protocol** - Brightness is controlled on hardware level via DDC/CI commands
 - ⚡ **Real-time Adjustment** - Instant brightness changes with no noticeable lag
 
 ## 🎯 How It Works
