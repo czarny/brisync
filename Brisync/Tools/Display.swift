@@ -19,7 +19,7 @@ enum DDCCommand: UInt8 {
 @objc class Display: NSObject {
     @objc public var name = ""
     @objc public var serial = ""
-    @objc public var brightness: Int = 0
+    @objc public var brightness: UInt = 0
 
     init(name: String = "", serial: String = "") {
         self.name = name
@@ -76,21 +76,23 @@ enum DDCCommand: UInt8 {
     init(display: AppleSiliconDDC.IOregService) {
         self.display = display
 
-        let value = AppleSiliconDDC.read(service: display.service, command: DDCCommand.brightness.rawValue)!
-        self.maxBrightnessValue = value.max
+        let value = AppleSiliconDDC.read(service: display.service, command: DDCCommand.brightness.rawValue)
+        self.maxBrightnessValue = value?.max ?? 100
         super.init(name: display.productName, serial: display.alphanumericSerialNumber)
     }
 
 
-    @objc public override var brightness: Int {
+    @objc public override var brightness: UInt {
         get {
-            let value = AppleSiliconDDC.read(service: display.service, command: DDCCommand.brightness.rawValue)!
-            let result = Int(Float(value.current)/Float(value.max) * 100)
-            return result
+            guard let value = AppleSiliconDDC.read(service: display.service, command: DDCCommand.brightness.rawValue),
+                  value.max > 0 else {
+                return 0
+            }
+            return UInt(Float(value.current)/Float(value.max) * 100)
         }
         set {
-            let scaled = (newValue * Int(maxBrightnessValue)) / 100
-            _ = AppleSiliconDDC.write(service: display.service, command: DDCCommand.brightness.rawValue, value: UInt16(exactly: scaled)!)
+            let scaled = (newValue * UInt(maxBrightnessValue)) / 100
+            _ = AppleSiliconDDC.write(service: display.service, command: DDCCommand.brightness.rawValue, value: UInt16(scaled))
         }
     }
 }
@@ -105,12 +107,11 @@ enum DDCCommand: UInt8 {
     }
 
 
-    @objc public override var brightness: Int {
+    @objc public override var brightness: UInt {
         get {
             var brightness: Float = 0
             _ = DisplayServicesGetBrightness(displayID, &brightness)
-            let result = Int(brightness * 100)
-            return result
+            return UInt(brightness * 100)
         }
         set {
             let scaled = Float(newValue) / 100.0

@@ -32,7 +32,7 @@
 
 
 - (void)onBrightnessChange:(NSNotification *)notification {
-    NSInteger brightness = [notification.object intValue];
+    NSUInteger brightness = [notification.object unsignedIntegerValue];
     self.brightnessLevel.doubleValue = brightness;
 }
 

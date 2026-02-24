@@ -16,7 +16,7 @@
 
 @interface MainController () {
     NSMutableDictionary *_displayMenuItems;
-    NSInteger _lastBrightness;
+    NSUInteger _lastBrightness;
 }
 
 @property(readonly) DisplayManager *displayManager;
@@ -66,7 +66,7 @@
 
 
 - (void)onBrightnessCheck:(NSTimer *)sender {
-    NSInteger brightness = self.displayManager.appleDisplay.brightness;
+    NSUInteger brightness = self.displayManager.appleDisplay.brightness;
 
     if(brightness != self->_lastBrightness) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"BuildInBrigthnessChange" object:@(brightness)];
@@ -79,12 +79,12 @@
 
 
 - (void)onWakeUp:(id)sender {
-    NSInteger brightness = self.displayManager.appleDisplay.brightness;
+    NSUInteger brightness = self.displayManager.appleDisplay.brightness;
     [self updateDisplayBrightness:brightness];
 }
 
 
-- (void)updateDisplayBrightness:(NSInteger)brightness {
+- (void)updateDisplayBrightness:(NSUInteger)brightness {
     for(Display *display in self.displayManager.externalDisplays) {
         // Adjust display brightness
         NSUInteger procent = [display adjustToLevel:brightness];
